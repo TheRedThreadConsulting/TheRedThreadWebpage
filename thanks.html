@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Thread is Spun | The Red Thread</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-red: #8b0000;
+            --blood-accent: #f00;
+            --gold-hued: #d4af37;
+            --silver-text: #c0c0c0;
+            --deep-black: #050505;
+        }
+        .bg-weave {
+            background-image: linear-gradient(rgba(139, 0, 0, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 0, 0, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-thread {
+            background: linear-gradient(to bottom, transparent, var(--primary-red), var(--blood-accent));
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+        .serif-sharp {
+            font-family: "Cormorant Garamond", serif;
+        }
+        .display-occult {
+            font-family: "Cinzel", serif;
+        }
+        .text-gold {
+            color: var(--gold-hued);
+        }
+        .sigil-container {
+            filter: drop-shadow(0 0 10px rgba(139, 0, 0, 0.8));
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8b0000",
+                        accent: "#ff0000",
+                        silver: "#c0c0c0",
+                        gold: "#d4af37",
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        display: ["Cinzel", "serif"],
+                        serif: ["Cormorant Garamond", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    }
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-dark text-silver font-sans selection:bg-primary/50 overflow-hidden bg-weave h-screen flex flex-col justify-between">
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1px] h-[35vh] glow-thread z-0"></div>
+<main class="relative z-10 flex flex-col items-center justify-center flex-grow px-6 text-center mt-20">
+<div class="sigil-container mb-8">
+<span class="material-symbols-outlined text-primary text-6xl font-extralight scale-150">gesture</span>
+</div>
+<h1 class="serif-sharp text-5xl md:text-7xl text-gold mb-6 font-light tracking-tight">
+            The Thread is Spun.
+        </h1>
+<p class="max-w-md mx-auto text-lg md:text-xl text-stone-400 font-light mb-12 leading-relaxed serif-sharp italic">
+            Your vision has entered the loom. A master weaver will reach out via your provided contact node shortly.
+        </p>
+<a class="group relative px-10 py-4 border border-primary/40 text-primary hover:text-white transition-all duration-700 bg-transparent hover:border-primary/80 display-occult tracking-[0.3em] text-[10px] uppercase" href="/">
+<span class="relative z-10">Return to the Loom</span>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+</a>
+</main>
+<footer class="py-12 border-t border-primary/10 relative z-10">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center space-x-3">
+<span class="display-occult text-[10px] tracking-[0.4em] text-stone-500 uppercase font-light">
+                    THE RED THREAD AGENCY // MMXXIV
+                </span>
+</div>
+<div class="flex space-x-10 display-occult text-[10px] tracking-[0.3em] uppercase text-stone-600">
+<a class="hover:text-primary transition-colors" href="#">Archive</a>
+<a class="hover:text-primary transition-colors" href="#">The Covenant</a>
+</div>
+</div>
+</footer>
+<div class="fixed top-8 left-8 w-12 h-12 border-t border-l border-primary/10 pointer-events-none"></div>
+<div class="fixed bottom-8 right-8 w-12 h-12 border-b border-r border-primary/10 pointer-events-none"></div>
+
+</body></html>
