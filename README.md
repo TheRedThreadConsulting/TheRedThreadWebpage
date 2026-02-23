@@ -1,6 +1,6 @@
 # The Red Thread Webpage
 
-This repository contains the source code for The Red Thread website.
+This repository contains the source code for **The Red Thread** website.
 
 ## Live Site
 Once GitHub Pages is enabled, the site will be available at:
@@ -8,12 +8,10 @@ Once GitHub Pages is enabled, the site will be available at:
 https://YOUR-USERNAME.github.io/TheRedThredWebpage/
 
 ## Structure
-
-- index.html → Main website file
-- README.md → Project documentation
+- `index.html` → Main website file (this is what GitHub Pages renders)
+- `README.md` → Project documentation (this file)
 
 ## About
-
 This project includes:
 - Fullscreen background portal
 - Animated breathing orb
@@ -22,5 +20,5 @@ This project includes:
 
 ---
 
-If you're viewing this on GitHub, this is documentation only.
+If you're viewing this on GitHub, this is documentation only.  
 The actual website is rendered from `index.html`.
