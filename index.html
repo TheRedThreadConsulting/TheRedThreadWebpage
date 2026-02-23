@@ -20,11 +20,14 @@ html, body {
 }
 
 /* Gate Background */
-body {
-  background-image: url("darkgate.png");
-  background-size: cover;
-  background-position: contain;
+body{
+  background-image: url("darkgate.png"); /* or whatever your path is */
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;     /* desktop default */
+  background-color: #000;
+  min-height: 100vh;
+}
 }
 
 /* Wrapper */
@@ -123,8 +126,42 @@ body {
   .orb, .floor-glow {
     animation: none;
   }
+  @media (max-width: 768px){
+  .orb-link{
+    top: 44%; /* nudge into the opening on mobile */
+    width: clamp(120px, 28vw, 200px);
+    height: clamp(120px, 28vw, 200px);
+  }
 }
+}
+ 
 </style>
+  <head>
+<style>
+  }
+.orb-link {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+}
+
+/* 👇 ADD MOBILE OVERRIDES BELOW EVERYTHING ELSE */
+
+@media (max-width: 768px){
+  body{
+    background-size: contain;
+  }
+
+  .orb-link{
+    top: 44%;
+    width: clamp(120px, 28vw, 200px);
+    height: clamp(120px, 28vw, 200px);
+  }
+}
+
+</style>
+</head>
 </head>
 
 <body>
