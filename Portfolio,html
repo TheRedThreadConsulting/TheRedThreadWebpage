@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Red Thread | Portfolio Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-red: #8b0000;
+            --blood-accent: #f00;
+            --gold-accent: #d4af37;
+            --silver-accent: #c0c0c0;
+            --deep-black: #050505;
+            --charcoal: #0a0a0a;
+            --thread-width: 1px;
+        }
+        .bg-weave {
+            background-image: radial-gradient(circle at 2px 2px, rgba(139, 0, 0, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .red-thread-path {
+            position: absolute;
+            background: linear-gradient(to right, transparent, var(--primary-red), transparent);
+            height: 1px;
+            width: 100%;
+            opacity: 0.3;
+            filter: blur(1px);
+        }
+        .red-thread-path-vertical {
+            position: absolute;
+            background: linear-gradient(to bottom, transparent, var(--primary-red), transparent);
+            width: 1px;
+            height: 100%;
+            opacity: 0.2;
+            filter: blur(1px);
+        }
+        .serif-sharp {
+            font-family: "Cormorant Garamond", serif;
+        }
+        .display-occult {
+            font-family: "Cinzel", serif;
+        }
+        .project-card:hover .blood-glow {
+            opacity: 0.4;
+            transform: scale(1.1);
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .blood-glow {
+            background: radial-gradient(circle, var(--primary-red) 0%, transparent 70%);
+            transition: all 0.7s ease-in-out;
+        }
+        .filter-btn.active {
+            color: var(--gold-accent);
+            border-bottom-color: var(--gold-accent);
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8b0000",
+                        gold: "#d4af37",
+                        silver: "#c0c0c0",
+                        charcoal: "#0a0a0a",
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        display: ["Cinzel", "serif"],
+                        serif: ["Cormorant Garamond", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    }
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-dark text-stone-300 font-sans selection:bg-primary/50 overflow-x-hidden bg-weave relative">
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="red-thread-path top-[10%] -rotate-2"></div>
+<div class="red-thread-path top-[30%] rotate-3"></div>
+<div class="red-thread-path top-[50%] -rotate-1"></div>
+<div class="red-thread-path top-[70%] rotate-2"></div>
+<div class="red-thread-path top-[90%] -rotate-3"></div>
+<div class="red-thread-path-vertical left-[15%] skew-x-6"></div>
+<div class="red-thread-path-vertical left-[45%] -skew-x-12"></div>
+<div class="red-thread-path-vertical right-[15%] skew-x-3"></div>
+</div>
+<nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+<div class="flex items-center space-x-3 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl font-light">gesture</span>
+<span class="display-occult text-xl tracking-[0.3em] text-white">THE RED THREAD</span>
+</div>
+<div class="hidden md:flex items-center space-x-10 display-occult text-[10px] tracking-[0.3em] uppercase">
+<a class="hover:text-gold transition-colors text-gold" href="#">The Gallery</a>
+<a class="hover:text-gold transition-colors text-stone-400" href="#">Services</a>
+<a class="px-8 py-2 border border-gold/30 text-gold hover:border-gold hover:bg-gold/5 transition-all duration-500" href="#">The Oracle</a>
+</div>
+</div>
+</nav>
+<header class="relative pt-48 pb-20 px-6 max-w-7xl mx-auto z-10">
+<div class="flex flex-col items-center text-center">
+<h1 class="serif-sharp text-gold text-5xl md:text-8xl font-light tracking-tight leading-none mb-8">
+            The Fabric of <br/>
+<span class="italic font-normal">Our Work</span>
+</h1>
+<div class="w-24 h-px bg-primary/40 mb-12"></div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12 display-occult text-[10px] tracking-[0.4em] uppercase border-b border-white/5 pb-4">
+<button class="filter-btn active border-b border-transparent transition-all pb-1">All Threads</button>
+<button class="filter-btn hover:text-gold border-b border-transparent transition-all pb-1">The Loom</button>
+<button class="filter-btn hover:text-gold border-b border-transparent transition-all pb-1">The Pattern</button>
+<button class="filter-btn hover:text-gold border-b border-transparent transition-all pb-1">The Weave</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pb-40 z-10 relative">
+<div class="grid grid-cols-12 gap-8 md:gap-y-40">
+<div class="col-span-12 md:col-span-8 group project-card relative">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none -translate-y-10"></div>
+<div class="relative overflow-hidden aspect-[16/9] border border-white/5 bg-charcoal">
+<img alt="Sacred Graphic Design" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dw9C-NyX7XWykVI7s5ftx8C6b3KtfUZNj-sQxNwmidayVFRoImfRa2u9wI2IdfJhuCWWKfiHGJE6P-I_qnNYLi0gbqBbGbZkrP0LC9MSJ6P86iKowF9gvAHDHWSQyQ5uWnJemKXXpj9KjxZ-ecfF5feuAVGe7liHzCxw5md-pTS43-DH5UQSkiuHir5zV2QmoS5YFCz4HeOHSSe8ehUnwjziKai5tYX0akHaIAR3sSiw0B72Gzhlju3ntl59AgSuQ8_-j4a3Z0c"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div>
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Pattern</span>
+<h3 class="serif-sharp text-3xl text-white mt-2 font-light">Sacred Graphic Design</h3>
+<p class="serif-sharp italic text-stone-500 text-xl">Divine geometry meets modern aesthetics</p>
+</div>
+<span class="material-symbols-outlined text-gold font-thin text-3xl">flare</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 md:mt-24 group project-card relative">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none scale-75"></div>
+<div class="relative overflow-hidden aspect-[3/4] border border-white/5 bg-charcoal">
+<img alt="Sigil-inspired Packaging Design" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-gHvmOaT0bgzoVjjDf447Uxlo_lKlAcP8yT6qHv0esIG-yDadIgB5S_YXHOLH7XNNW2DcDGxdOvzkd_cprIdTh_FV26Wmi9VXl5y9ix9rluglOZjNw05MtbLbhjJkiro2ObKr157Oj3kXuO49BThR8Zgm7hjhdIP8RgIUYWf1tllwSCibT0OwmyafSaTnIZSG5JMu5V2Rsj6RvXr_JgStEAqOoF-Vbkg0GTdqO9w8MlYO37yMZO4cGZO_QdUp2hCDDF4GGYllCMo"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-8">
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Pattern</span>
+<h3 class="serif-sharp text-2xl text-white mt-2 font-light">Sigil-inspired Packaging Design</h3>
+</div>
+</div>
+<div class="col-span-12 group project-card relative md:px-20">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none scale-x-125 translate-y-20"></div>
+<div class="relative overflow-hidden aspect-[21/9] border border-white/5 bg-charcoal">
+<img alt="Ethereal Web Architecture" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-50 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2-RPicLYb1reJAgl2p3HPwKDsOeDUwVV8MDtVtZK-mhRudE5Oq9Td4TTVR0W-M7v8yqRaYASumJGgxOniWsJNEpndq5guxdLAIrJIGuzRzDAvKw9LE7gAjqkUXzAmqaRwwkG9QAfc-OGT_Wno6tl9Iv5Zm4e5k8XlJ8sE52GIOss9QxKwyAPw6CPWlSlTiGzhaFMLEaMetYw4qloGV4I5ufpKMFh4Y7cIv2ja4F1FR99kxmYdN9S9NyatV2B08NfYvY0upYfO_zQ"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-12 text-center">
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Weave</span>
+<h3 class="serif-sharp text-5xl text-white mt-2 font-light">Ethereal Web Architecture</h3>
+<p class="serif-sharp italic text-stone-500 text-xl mt-4 max-w-2xl mx-auto">Digital sanctuaries constructed through coded incantations and structural harmony.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 group project-card relative">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none"></div>
+<div class="relative overflow-hidden aspect-square border border-white/5 bg-charcoal">
+<img alt="Collective Unconscious Strategy" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcRR8iaUm-efYU5gV3gDQyTFxyVD8NK6nWYH7hRkx5zjNrMP0HYr0nIRdL2QO9bPZlJWtHm6g73utdTIMRPEn_2oNML1Q2XlqrJ6gKjvwEgLF_cnX9lHNvBOEKzNv101EktaNjiDJ8OdxVfURp-A6o2m9gCPasYGqAWznLN1fZtgpHjH8sB-qeCk14s2iDV2l7M2OFB1K5Rf0jVGoATCzwpwYuxOUjIazwxFBToRYtXih8GBh-a1a_R04NYWkXHvNbgTKd5MADdrc"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-8">
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Loom</span>
+<h3 class="serif-sharp text-2xl text-white mt-2 font-light">Collective Unconscious Strategy</h3>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 group project-card relative md:-mt-32">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none"></div>
+<div class="relative overflow-hidden aspect-[4/5] border border-white/5 bg-charcoal">
+<img alt="Ritualized UI Frameworks" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzlAT42sPJVeIfzTM6-vpRGvwYkNvoeZtEe-D4zg0xULw4qlH7B02TQnGY0rb1EZSaGVQfL7YGGusQmc3qWL1AsqRsEUOaG8e5543R0F2QAdhLmYLbchggPlyVtNAam659XvM7VBZyWwcZl1Qg1P20p1risL0EIzH1QnLsUEyiJEiIQjYd70tT4SxqCmaoYD7dcAQksX7UOOkDE-KaLG4UG8McWDR43pWvVXceKSsDHw5CAQVB5kJiaPCDoLdgqyHUX24Y1EzhpL8"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-8">
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Weave</span>
+<h3 class="serif-sharp text-3xl text-white mt-2 font-light">Ritualized UI Frameworks</h3>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 group project-card relative">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none"></div>
+<div class="relative overflow-hidden aspect-[9/12] border border-white/5 bg-charcoal">
+<img alt="Alchemical Brand Identity" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dw9C-NyX7XWykVI7s5ftx8C6b3KtfUZNj-sQxNwmidayVFRoImfRa2u9wI2IdfJhuCWWKfiHGJE6P-I_qnNYLi0gbqBbGbZkrP0LC9MSJ6P86iKowF9gvAHDHWSQyQ5uWnJemKXXpj9KjxZ-ecfF5feuAVGe7liHzCxw5md-pTS43-DH5UQSkiuHir5zV2QmoS5YFCz4HeOHSSe8ehUnwjziKai5tYX0akHaIAR3sSiw0B72Gzhlju3ntl59AgSuQ8_-j4a3Z0c"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-8">
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Loom</span>
+<h3 class="serif-sharp text-3xl text-white mt-2 font-light">Alchemical Brand Identity</h3>
+<p class="serif-sharp italic text-stone-500 text-lg mt-2">Transforming leaden concepts into gold</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8 md:mt-20 group project-card relative">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none"></div>
+<div class="relative overflow-hidden aspect-[16/8] border border-white/5 bg-charcoal">
+<img alt="Mystical Social Kits" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2-RPicLYb1reJAgl2p3HPwKDsOeDUwVV8MDtVtZK-mhRudE5Oq9Td4TTVR0W-M7v8yqRaYASumJGgxOniWsJNEpndq5guxdLAIrJIGuzRzDAvKw9LE7gAjqkUXzAmqaRwwkG9QAfc-OGT_Wno6tl9Iv5Zm4e5k8XlJ8sE52GIOss9QxKwyAPw6CPWlSlTiGzhaFMLEaMetYw4qloGV4I5ufpKMFh4Y7cIv2ja4F1FR99kxmYdN9S9NyatV2B08NfYvY0upYfO_zQ"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-end">
+<div>
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Weave</span>
+<h3 class="serif-sharp text-3xl text-white mt-2 font-light">Mystical Social Kits</h3>
+</div>
+<div class="hidden md:block w-32 h-px bg-gold/20 mb-3"></div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-4 group project-card relative mb-12">
+<div class="absolute inset-0 blood-glow opacity-0 z-0 pointer-events-none translate-y-20"></div>
+<div class="relative overflow-hidden aspect-square md:aspect-[4/3] border border-white/5 bg-charcoal">
+<img alt="Esoteric Print Collateral" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-gHvmOaT0bgzoVjjDf447Uxlo_lKlAcP8yT6qHv0esIG-yDadIgB5S_YXHOLH7XNNW2DcDGxdOvzkd_cprIdTh_FV26Wmi9VXl5y9ix9rluglOZjNw05MtbLbhjJkiro2ObKr157Oj3kXuO49BThR8Zgm7hjhdIP8RgIUYWf1tllwSCibT0OwmyafSaTnIZSG5JMu5V2Rsj6RvXr_JgStEAqOoF-Vbkg0GTdqO9w8MlYO37yMZO4cGZO_QdUp2hCDDF4GGYllCMo"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
+<button class="serif-sharp text-white text-lg border border-white/20 px-8 py-3 backdrop-blur-sm hover:bg-white hover:text-black transition-all">View Details</button>
+</div>
+</div>
+<div class="mt-12 text-center">
+<span class="display-occult text-[9px] tracking-[0.4em] text-primary uppercase">The Pattern</span>
+<h3 class="serif-sharp text-4xl text-white mt-2 font-light">Esoteric Print Collateral</h3>
+<p class="serif-sharp italic text-stone-500 text-xl mt-2">Tactile manifestations of the unseen</p>
+</div>
+</div>
+</div>
+</main>
+<section class="py-32 relative overflow-hidden bg-charcoal/50 border-t border-primary/10">
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="serif-sharp text-4xl md:text-5xl text-white font-light italic mb-12">
+            "Every creation is a thread pulled from the infinite."
+        </h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<a class="px-12 py-5 bg-primary text-white display-occult tracking-widest text-[10px] hover:bg-primary/80 transition-all border border-primary" href="#">
+                COMMENCE THE WORK
+            </a>
+<a class="px-12 py-5 border border-gold/30 text-gold display-occult tracking-widest text-[10px] hover:border-gold transition-all" href="#">
+                VIEW ALL SERVICES
+            </a>
+</div>
+</div>
+</section>
+<footer class="py-20 border-t border-white/5 bg-background-dark relative">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-2xl font-thin">gesture</span>
+<span class="display-occult text-[9px] tracking-[0.4em] text-stone-500 uppercase">The Red Thread // MMXXIV</span>
+</div>
+<div class="flex space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase text-stone-600">
+<a class="hover:text-gold transition-colors" href="#">Manifesto</a>
+<a class="hover:text-gold transition-colors" href="#">The Archives</a>
+<a class="hover:text-gold transition-colors" href="#">Oracle</a>
+</div>
+<div class="text-stone-800 display-occult text-[9px] tracking-[0.5em]">
+            BEYOND THE VEIL
+        </div>
+</div>
+</footer>
+
+</body></html>
