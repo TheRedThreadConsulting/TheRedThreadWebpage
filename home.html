@@ -208,53 +208,52 @@ section {
       </p>
     </div>
 
-    <!-- Right column -->
-    <div class="relative w-full max-w-xl mx-auto md:max-w-none">
-      <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-primary opacity-50"></div>
-      <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-primary opacity-50"></div>
+   <!-- Right column -->
+<div class="relative w-full max-w-xl mx-auto md:max-w-none">
+  <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-primary opacity-50"></div>
+  <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-primary opacity-50"></div>
 
-  <input type="hidden" name="form-name" value="contact">
-  <input type="hidden" name="_redirect" value="https://theredthreadconsulting.netlify.app/thanks.html">
+  <form name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="space-y-12 p-7 md:p-12 bg-stone-900/30 border border-primary/10 backdrop-blur-md">
 
-  <p class="hidden">
-    <label>Don’t fill this out: <input name="bot-field"></label>
-  </p>
+    <input type="hidden" name="form-name" value="contact">
+    <input type="hidden" name="_redirect" value="/thanks.html">
 
-        <input type="hidden" name="form-name" value="contact">
-        <input type="hidden" name="form-name" value="contact">
-        <input type="hidden" name="_redirect" value="/thanks.html">
-        <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field"></label>
-        </p>
+    <p class="hidden">
+      <label>Don’t fill this out: <input name="bot-field"></label>
+    </p>
 
-        <div>
-          <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Initiate's Name</label>
-          <input name="name" type="text" required
-                 class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
-                 placeholder="Name or Alias" />
-        </div>
-
-        <div>
-          <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Email</label>
-          <input name="email" type="email" required
-                 class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
-                 placeholder="your@email.com" />
-        </div>
-
-        <div>
-          <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">The Request</label>
-          <textarea name="message" required rows="5"
-                    class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
-                    placeholder="Describe the pattern you wish to weave..."></textarea>
-        </div>
-
-        <button class="group relative w-full py-6 bg-primary text-white display-occult tracking-[0.4em] uppercase text-xs overflow-hidden" type="submit">
-          <span class="relative z-10">BEGIN THE WEAVE</span>
-          <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-        </button>
-
-      </form>
+    <div>
+      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Initiate's Name</label>
+      <input name="name" type="text" required
+             class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
+             placeholder="Name or Alias" />
     </div>
+
+    <div>
+      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Email</label>
+      <input name="email" type="email" required
+             class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
+             placeholder="your@email.com" />
+    </div>
+
+    <div>
+      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">The Request</label>
+      <textarea name="message" required rows="5"
+                class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
+                placeholder="Describe the pattern you wish to weave..."></textarea>
+    </div>
+
+    <button class="group relative w-full py-6 bg-primary text-white display-occult tracking-[0.4em] uppercase text-xs overflow-hidden" type="submit">
+      <span class="relative z-10">BEGIN THE WEAVE</span>
+      <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+    </button>
+
+  </form>
+</div>
 
   </div>
 </section>
