@@ -208,15 +208,17 @@ section {
       </p>
     </div>
 
-   <!-- Right column -->
+  <!-- Right column -->
 <div class="relative w-full max-w-xl mx-auto md:max-w-none">
+
   <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-primary opacity-50"></div>
   <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-primary opacity-50"></div>
 
+  <!-- FORM STARTS HERE -->
   <form name="contact"
         method="POST"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        netlify-honeypot="bot-field"
         class="space-y-12 p-7 md:p-12 bg-stone-900/30 border border-primary/10 backdrop-blur-md">
 
     <input type="hidden" name="form-name" value="contact">
@@ -227,7 +229,7 @@ section {
     </p>
 
     <div>
-      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Initiate's Name</label>
+      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Name</label>
       <input name="name" type="text" required
              class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
              placeholder="Name or Alias" />
