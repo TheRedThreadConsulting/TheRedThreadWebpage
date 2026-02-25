@@ -61,25 +61,36 @@
         }
     </style>
 <script>
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          primary: "#8b0000",
-          gold: "#d4af37",
-          silver: "#c0c0c0",
-          charcoal: "#0a0a0a",
-          "background-dark": "#050505",
-        },
-        fontFamily: {
-          display: ["Cinzel", "serif"],
-          serif: ["Cormorant Garamond", "serif"],
-          sans: ["Inter", "sans-serif"],
-        }
-      },
-    },
-  };
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+
+    const closeMenu = () => {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closeMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  });
 </script>
 </head>
 
@@ -123,7 +134,7 @@
 
         <div
           id="mobileMenu"
-          class="hidden absolute right-0 mt-3 w-64 z-50 rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
+          class="hidden absolute right-0 mt-3 w-64 z-[999] rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
         >
           <div class="flex flex-col p-3 display-occult text-[10px] tracking-[0.3em] uppercase">
             <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html">The Loom</a>
