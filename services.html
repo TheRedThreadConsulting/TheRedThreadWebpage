@@ -1,86 +1,72 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Red Thread | Services Directory</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style type="text/tailwindcss">
-        :root {
-            --primary-red: #8b0000;
-            --blood-accent: #f00;
-            --gold-accent: #d4af37;
-            --silver-accent: #c0c0c0;
-            --deep-black: #050505;
-            --charcoal: #0a0a0a;
-            --thread-width: 1px;
-        }
-        .bg-weave {
-            background-image: linear-gradient(rgba(139, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 0, 0, 0.05) 1px, transparent 1px);
-            background-size: 60px 60px;
-        }
-        .red-thread-vertical {
-            width: var(--thread-width);
-            background: linear-gradient(to bottom, transparent, var(--primary-red), transparent);
-        }
-        .red-thread-horizontal {
-            height: var(--thread-width);
-            background: linear-gradient(to right, transparent, var(--primary-red), transparent);
-        }
-        .serif-sharp {
-            font-family: "Cormorant Garamond", serif;
-        }
-        .display-occult {
-            font-family: "Cinzel", serif;
-        }
-        .sigil-icon {
-            font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 48;
-            color: var(--gold-accent);
-        }
-        .loom-texture {
-            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA-gHvmOaT0bgzoVjjDf447Uxlo_lKlAcP8yT6qHv0esIG-yDadIgB5S_YXHOLH7XNNW2DcDGxdOvzkd_cprIdTh_FV26Wmi9VXl5y9ix9rluglOZjNw05MtbLbhjJkiro2ObKr157Oj3kXuO49BThR8Zgm7hjhdIP8RgIUYWf1tllwSCibT0OwmyafSaTnIZSG5JMu5V2Rsj6RvXr_JgStEAqOoF-Vbkg0GTdqO9w8MlYO37yMZO4cGZO_QdUp2hCDDF4GGYllCMo);
-            opacity: 0.03;
-        }
-        section {
-            scroll-margin-top: 80px;
-        }
-    </style>
-<style type="text/tailwindcss">
-   :root {
-      ...
-   }
-   ...
-</style>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>The Red Thread | Services Directory</title>
 
-<script>
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          primary: "#8b0000",
-          gold: "#d4af37",
-          silver: "#c0c0c0",
-          charcoal: "#0a0a0a",
-          "background-dark": "#050505",
-        },
-        fontFamily: {
-          display: ["Cinzel", "serif"],
-          serif: ["Cormorant Garamond", "serif"],
-          sans: ["Inter", "sans-serif"],
-        },
-      },
-    },
-  };
-</script>
-</head>
-</script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <style type="text/tailwindcss">
+    :root {
+      --primary-red: #8b0000;
+      --gold-accent: #d4af37;
+      --silver-accent: #c0c0c0;
+      --deep-black: #050505;
+      --charcoal: #0a0a0a;
+      --thread-width: 1px;
+    }
+
+    .bg-weave {
+      background-image:
+        linear-gradient(rgba(139, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .red-thread-path {
+      position: absolute;
+      background: linear-gradient(to right, transparent, var(--primary-red), transparent);
+      height: 1px;
+      width: 100%;
+      opacity: 0.30;
+      filter: blur(1px);
+    }
+
+    .red-thread-path-vertical {
+      position: absolute;
+      background: linear-gradient(to bottom, transparent, var(--primary-red), transparent);
+      width: 1px;
+      height: 100%;
+      opacity: 0.20;
+      filter: blur(1px);
+    }
+
+    .serif-sharp { font-family: "Cormorant Garamond", serif; }
+    .display-occult { font-family: "Cinzel", serif; }
+
+    .sigil-icon {
+      font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 48;
+      color: var(--gold-accent);
+    }
+
+    .loom-texture {
+      background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA-gHvmOaT0bgzoVjjDf447Uxlo_lKlAcP8yT6qHv0esIG-yDadIgB5S_YXHOLH7XNNW2DcDGxdOvzkd_cprIdTh_FV26Wmi9VXl5y9ix9rluglOZjNw05MtbLbhjJkiro2ObKr157Oj3kXuO49BThR8Zgm7hjhdIP8RgIUYWf1tllwSCibT0OwmyafSaTnIZSG5JMu5V2Rsj6RvXr_JgStEAqOoF-Vbkg0GTdqO9w8MlYO37yMZO4cGZO_QdUp2hCDDF4GGYllCMo);
+      opacity: 0.03;
+    }
+
+    section { scroll-margin-top: 92px; }
+  </style>
 </head>
 
-<body class="bg-background-dark text-stone-300 font-sans selection:bg-primary/50 overflow-x-hidden bg-weave relative">
+<body class="bg-[#050505] text-stone-300 font-[Inter] selection:bg-[#8b0000]/50 overflow-x-hidden bg-weave relative">
+
+  <!-- Background Threads -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
     <div class="red-thread-path top-[10%] -rotate-2"></div>
     <div class="red-thread-path top-[30%] rotate-3"></div>
@@ -92,25 +78,30 @@
     <div class="red-thread-path-vertical right-[15%] skew-x-3"></div>
   </div>
 
-  <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20">
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-[#8b0000]/20">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
       <div class="flex items-center space-x-3 group">
-        <span class="material-symbols-outlined text-primary text-3xl font-light">gesture</span>
+        <span class="material-symbols-outlined text-[#8b0000] text-3xl font-light">gesture</span>
         <span class="display-occult text-xl tracking-[0.3em] text-white">THE RED THREAD</span>
       </div>
 
+      <!-- Desktop links -->
       <div class="hidden md:flex items-center space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase">
-        <a class="hover:text-primary transition-colors text-stone-400" href="services.html">The Loom</a>
-        <a class="hover:text-primary transition-colors text-stone-400" href="home.html">The Threshold</a>
-        <a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="home.html#contact">Contact the Oracle</a>
+        <a class="hover:text-[#8b0000] transition-colors text-stone-400" href="services.html">The Loom</a>
+        <a class="hover:text-[#8b0000] transition-colors text-stone-400" href="home.html">The Threshold</a>
+        <a class="px-8 py-2 border border-[#8b0000]/30 text-white hover:border-[#8b0000] hover:text-[#8b0000] transition-all duration-500 bg-[#8b0000]/5" href="home.html#contact">
+          Contact the Oracle
+        </a>
       </div>
 
-      <!-- Mobile menu button + dropdown -->
+      <!-- Mobile menu -->
       <div class="md:hidden relative">
         <button
           id="mobileMenuButton"
           type="button"
-          class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-primary hover:bg-white/5 transition"
+          class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-[#8b0000] hover:bg-white/5 transition"
           aria-controls="mobileMenu"
           aria-expanded="false"
           aria-label="Open menu"
@@ -120,12 +111,13 @@
 
         <div
           id="mobileMenu"
-          class="hidden absolute right-0 mt-3 w-64 z-50 rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
+          class="hidden absolute right-0 mt-3 w-64 z-[999] rounded-xl border border-[#8b0000]/20 bg-[#050505]/95 backdrop-blur-xl shadow-2xl overflow-hidden"
         >
           <div class="flex flex-col p-3 display-occult text-[10px] tracking-[0.3em] uppercase">
-            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="portfolio.html">The Gallery</a>
-            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="home.html">The Threshold</a>
-            <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="home.html#contact">Contact the Oracle</a>
+            <a class="px-3 py-3 text-stone-300 hover:text-[#8b0000] hover:bg-white/5 transition rounded-lg" href="services.html">The Loom</a>
+            <a class="px-3 py-3 text-stone-300 hover:text-[#8b0000] hover:bg-white/5 transition rounded-lg" href="portfolio.html">The Gallery</a>
+            <a class="px-3 py-3 text-stone-300 hover:text-[#8b0000] hover:bg-white/5 transition rounded-lg" href="home.html">The Threshold</a>
+            <a class="px-3 py-3 text-white border border-[#8b0000]/30 bg-[#8b0000]/5 hover:border-[#8b0000] hover:text-[#8b0000] transition rounded-lg" href="home.html#contact">Contact the Oracle</a>
           </div>
         </div>
       </div>
@@ -133,197 +125,232 @@
     </div>
   </nav>
 
-</div>
-</nav>
-</nav>
-<header class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-<div class="absolute inset-0 loom-texture"></div>
-<div class="relative z-10 max-w-5xl px-6 text-center">
-<h2 class="display-occult text-xs md:text-sm tracking-[0.6em] uppercase text-primary mb-8">Services Directory</h2>
-<h1 class="serif-sharp text-5xl md:text-8xl text-white leading-[0.9] mb-10 font-light">
-                The Fabric of<br/>
-<span class="italic text-stone-400">Esoteric Influence.</span>
-</h1>
-<p class="max-w-2xl mx-auto text-lg md:text-xl text-stone-500 font-light mb-14 leading-relaxed">
-                We craft the threads that connect the material to the mystical. Explore our specialized disciplines in marketing, design, and digital architecture.
-            </p>
-</div>
-</header>
-<section class="py-24 md:py-40 relative bg-charcoal" id="loom">
-<div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-<div class="max-w-7xl mx-auto px-6 relative">
-<div class="grid md:grid-cols-2 gap-20 items-center">
-<div>
-<span class="display-occult text-gold tracking-[0.5em] text-[10px] uppercase mb-6 block">Marketing &amp; Campaign Management</span>
-<h2 class="serif-sharp text-5xl md:text-7xl text-white mb-8 font-light">The Loom</h2>
-<p class="text-stone-400 text-lg font-light leading-relaxed mb-12">
-                        Strategy is the base on which all influence is spun. Through The Loom, we orchestrate complex movements that ensure your narrative reaches the collective unconscious with intent.
-                    </p>
-<div class="grid grid-cols-1 gap-y-4">
-<div class="flex items-center space-x-4 border-b border-primary/10 pb-4 group">
-<span class="material-symbols-outlined sigil-icon">auto_awesome</span>
-<span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Multi-Channel Digital Strategy</span>
-</div>
-<div class="flex items-center space-x-4 border-b border-primary/10 pb-4 group">
-<span class="material-symbols-outlined sigil-icon">analytics</span>
-<span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Performance Marketing</span>
-</div>
-<div class="flex items-center space-x-4 border-b border-primary/10 pb-4 group">
-<span class="material-symbols-outlined sigil-icon">settings_input_component</span>
-<span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">CRM Automations</span>
-</div>
-<div class="flex items-center space-x-4 border-b border-primary/10 pb-4 group">
-<span class="material-symbols-outlined sigil-icon">schema</span>
-<span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Social Media Content Architecture</span>
-</div>
-<div class="flex items-center space-x-4 border-b border-primary/10 pb-4 group">
-<span class="material-symbols-outlined sigil-icon">play_circle</span>
-<span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Launch Orchestration</span>
-</div>
-<div class="flex items-center space-x-4 border-b border-primary/10 pb-4 group">
-<span class="material-symbols-outlined sigil-icon">query_stats</span>
-<span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">CRO &amp; SEO Strategy</span>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="bg-stone-900/40 border border-primary/20 relative overflow-hidden p-6 md:p-10">
-  <img
-    src="WorkTable.png"
-    alt="Alchemy of Marketing"
-    class="w-full h-auto max-h-[520px] md:max-h-[680px] object-contain mx-auto"
-  />
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
-</div>
-<div class="absolute -top-10 -right-10 w-40 h-40 border border-gold/10 pointer-events-none"></div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 md:py-40 relative bg-background-dark" id="pattern">
-<div class="absolute inset-0 loom-texture"></div>
-<div class="max-w-7xl mx-auto px-6 relative">
-<div class="text-center mb-24">
-<span class="display-occult text-silver tracking-[0.5em] text-[10px] uppercase mb-6 block text-center">Graphic Design &amp; Brand Systems</span>
-<h2 class="serif-sharp text-5xl md:text-7xl text-white font-light italic">The Pattern</h2>
-</div>
-<div class="grid md:grid-cols-3 gap-12">
-<div class="p-8 border border-white/5 bg-charcoal/50 backdrop-blur-sm group hover:border-gold/30 transition-all duration-700">
-<span class="material-symbols-outlined text-gold text-4xl mb-6 font-thin">pentagon</span>
-<h3 class="display-occult text-white text-lg tracking-widest mb-6">Visual Foundations</h3>
-<ul class="space-y-4 text-stone-500 font-light">
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Vector Logo Systems</li>
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Visual Identity Frameworks</li>
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Typography Documentation</li>
-</ul>
-</div>
-<div class="p-8 border border-white/5 bg-charcoal/50 backdrop-blur-sm group hover:border-gold/30 transition-all duration-700">
-<span class="material-symbols-outlined text-gold text-4xl mb-6 font-thin">grid_view</span>
-<h3 class="display-occult text-white text-lg tracking-widest mb-6">Asset Manifestation</h3>
-<ul class="space-y-4 text-stone-500 font-light">
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Digital Asset Kits</li>
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Premium Print Production</li>
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Alchemy-led Packaging</li>
-</ul>
-</div>
-<div class="p-8 border border-white/5 bg-charcoal/50 backdrop-blur-sm group hover:border-gold/30 transition-all duration-700">
-<span class="material-symbols-outlined text-gold text-4xl mb-6 font-thin">shield_moon</span>
-<h3 class="display-occult text-white text-lg tracking-widest mb-6">System Guardianship</h3>
-<ul class="space-y-4 text-stone-500 font-light">
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Brand Asset Management</li>
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Style Evolution Strategy</li>
-<li class="flex items-start"><span class="text-primary mr-3 text-xs">◆</span> Visual Consistency Audits</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 md:py-40 relative bg-charcoal" id="weave">
-<div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-<div class="max-w-7xl mx-auto px-6 relative">
-<div class="flex flex-col md:flex-row gap-16 items-start">
-<div class="md:w-1/3 sticky top-24 z-20 bg-charcoal/95 backdrop-blur-md rounded-2xl p-6">
-<span class="display-occult text-gold tracking-[0.5em] text-[10px] uppercase mb-6 block">Website Development</span>
-<h2 class="serif-sharp text-5xl md:text-7xl text-white mb-8 font-light">The Weave</h2>
-<p class="text-stone-400 font-light leading-relaxed">
-                        In the digital realm, we weave code and aesthetics into seamless rituals. Our development is mobile-first, secure, and built for transcendence.
-                    </p>
-<div class="mt-12 h-px w-24 bg-primary"></div>
-</div>
-<div class="md:w-2/3 grid sm:grid-cols-2 gap-px bg-primary/10 border border-primary/10">
-<div class="p-10 bg-charcoal hover:bg-black transition-colors">
-<span class="material-symbols-outlined sigil-icon text-3xl mb-4">desktop_windows</span>
-<h4 class="serif-sharp text-2xl text-white mb-2">Custom UI/UX</h4>
-<p class="text-sm text-stone-500 font-light">Bespoke interfaces designed for intuitive journeying.</p>
-</div>
-<div class="p-10 bg-charcoal hover:bg-black transition-colors">
-<span class="material-symbols-outlined sigil-icon text-3xl mb-4">shopping_cart</span>
-<h4 class="serif-sharp text-2xl text-white mb-2">E-commerce</h4>
-<p class="text-sm text-stone-500 font-light">Transactional systems for sacred commerce.</p>
-</div>
-<div class="p-10 bg-charcoal hover:bg-black transition-colors">
-<span class="material-symbols-outlined sigil-icon text-3xl mb-4">menu_book</span>
-<h4 class="serif-sharp text-2xl text-white mb-2">LMS &amp; Portals</h4>
-<p class="text-sm text-stone-500 font-light">Membership sanctuaries and educational nodes.</p>
-</div>
-<div class="p-10 bg-charcoal hover:bg-black transition-colors">
-<span class="material-symbols-outlined sigil-icon text-3xl mb-4">api</span>
-<h4 class="serif-sharp text-2xl text-white mb-2">API Integrations</h4>
-<p class="text-sm text-stone-500 font-light">Connecting disparate realities into one truth.</p>
-</div>
-<div class="p-10 bg-charcoal hover:bg-black transition-colors">
-<span class="material-symbols-outlined sigil-icon text-3xl mb-4">smartphone</span>
-<h4 class="serif-sharp text-2xl text-white mb-2">Mobile-First Dev</h4>
-<p class="text-sm text-stone-500 font-light">Universal access across all glass portals.</p>
-</div>
-<div class="p-10 bg-charcoal hover:bg-black transition-colors">
-<span class="material-symbols-outlined sigil-icon text-3xl mb-4">encrypted</span>
-<h4 class="serif-sharp text-2xl text-white mb-2">Hosting &amp; Security</h4>
-<p class="text-sm text-stone-500 font-light">Unbreakable shields for your digital temple.</p>
-</div>
-<div class="p-10 bg-charcoal hover:bg-black transition-colors sm:col-span-2">
-<span class="material-symbols-outlined sigil-icon text-3xl mb-4">terminal</span>
-<h4 class="serif-sharp text-2xl text-white mb-2">CMS Implementation</h4>
-<p class="text-sm text-stone-500 font-light">Empowering your scribes with custom content tools.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-32 relative overflow-hidden bg-background-dark" id="contact">
-<div class="absolute inset-0 bg-weave opacity-20"></div>
-<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-<h2 class="serif-sharp text-4xl md:text-6xl text-white font-light italic mb-12">
-                "Follow the thread to where vision meets mastery."
-            </h2>
-<div class="flex flex-col md:flex-row items-center justify-center gap-8">
-<a class="px-12 py-5 bg-primary text-white display-occult tracking-widest text-xs hover:bg-primary/80 transition-all border border-primary" href="home.html#contact">
-                    INITIALIZE PROJECT
-                </a>
-<a class="px-12 py-5 border border-gold/30 text-gold display-occult tracking-widest text-xs hover:border-gold transition-all" href="portfolio.html">
-                    VIEW WORK
-                </a>
-</div>
-</div>
-</section>
-<footer class="py-20 border-t border-primary/20 bg-charcoal relative">
-<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
-<div class="flex items-center space-x-3">
-<span class="material-symbols-outlined text-primary text-2xl font-thin">gesture</span>
-<span class="display-occult text-xs tracking-[0.4em] text-white uppercase">The Red Thread Agency // MMXXIV</span>
-</div>
-<div class="flex space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase text-stone-600">
-<a class="hover:text-gold transition-colors" href="home.html">Home</a>
-<a class="hover:text-gold transition-colors" href="services.html">Services</a>
-<a class="hover:text-gold transition-colors" href="portfolio.html">The Gallery</a>
-</div>
-<div class="text-stone-700 display-occult text-[9px] tracking-[0.4em]">
-                CRAFTING THE UNSEEN
+  <!-- HERO -->
+  <header class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-24">
+    <div class="absolute inset-0 loom-texture"></div>
+
+    <div class="relative z-10 max-w-5xl px-6 text-center">
+      <h2 class="display-occult text-xs md:text-sm tracking-[0.6em] uppercase text-[#8b0000] mb-8">Services Directory</h2>
+
+      <h1 class="serif-sharp text-5xl md:text-8xl text-white leading-[0.9] mb-10 font-light">
+        The Fabric of<br/>
+        <span class="italic text-stone-400">Esoteric Influence.</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-stone-500 font-light mb-14 leading-relaxed">
+        We craft the threads that connect the material to the mystical. Explore our specialized disciplines in marketing, design, and digital architecture.
+      </p>
+    </div>
+  </header>
+
+  <!-- LOOM -->
+  <section class="py-24 md:py-40 relative bg-[#0a0a0a]" id="loom">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8b0000]/30 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="grid md:grid-cols-2 gap-20 items-center">
+
+        <div>
+          <span class="display-occult text-[#d4af37] tracking-[0.5em] text-[10px] uppercase mb-6 block">
+            Marketing &amp; Campaign Management
+          </span>
+
+          <h2 class="serif-sharp text-5xl md:text-7xl text-white mb-8 font-light">The Loom</h2>
+
+          <p class="text-stone-400 text-lg font-light leading-relaxed mb-12">
+            Strategy is the base on which all influence is spun. Through The Loom, we orchestrate complex movements that ensure your narrative reaches the collective unconscious with intent.
+          </p>
+
+          <div class="grid grid-cols-1 gap-y-4">
+            <div class="flex items-center space-x-4 border-b border-[#8b0000]/10 pb-4 group">
+              <span class="material-symbols-outlined sigil-icon">auto_awesome</span>
+              <span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Multi-Channel Digital Strategy</span>
             </div>
-</div>
-</footer>
-<script>
+            <div class="flex items-center space-x-4 border-b border-[#8b0000]/10 pb-4 group">
+              <span class="material-symbols-outlined sigil-icon">analytics</span>
+              <span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Performance Marketing</span>
+            </div>
+            <div class="flex items-center space-x-4 border-b border-[#8b0000]/10 pb-4 group">
+              <span class="material-symbols-outlined sigil-icon">settings_input_component</span>
+              <span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">CRM Automations</span>
+            </div>
+            <div class="flex items-center space-x-4 border-b border-[#8b0000]/10 pb-4 group">
+              <span class="material-symbols-outlined sigil-icon">schema</span>
+              <span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Social Media Content Architecture</span>
+            </div>
+            <div class="flex items-center space-x-4 border-b border-[#8b0000]/10 pb-4 group">
+              <span class="material-symbols-outlined sigil-icon">play_circle</span>
+              <span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">Launch Orchestration</span>
+            </div>
+            <div class="flex items-center space-x-4 border-b border-[#8b0000]/10 pb-4 group">
+              <span class="material-symbols-outlined sigil-icon">query_stats</span>
+              <span class="serif-sharp text-xl text-stone-300 group-hover:text-white transition-colors">CRO &amp; SEO Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="bg-stone-900/40 border border-[#8b0000]/20 relative overflow-hidden p-6 md:p-10">
+            <img
+              src="WorkTable.png"
+              alt="Alchemy of Marketing"
+              class="w-full h-auto max-h-[520px] md:max-h-[680px] object-contain mx-auto"
+            />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute -top-10 -right-10 w-40 h-40 border border-[#d4af37]/10 pointer-events-none"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PATTERN -->
+  <section class="py-24 md:py-40 relative bg-[#050505]" id="pattern">
+    <div class="absolute inset-0 loom-texture"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="text-center mb-24">
+        <span class="display-occult text-[#c0c0c0] tracking-[0.5em] text-[10px] uppercase mb-6 block">
+          Graphic Design &amp; Brand Systems
+        </span>
+        <h2 class="serif-sharp text-5xl md:text-7xl text-white font-light italic">The Pattern</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700">
+          <span class="material-symbols-outlined text-[#d4af37] text-4xl mb-6 font-thin">pentagon</span>
+          <h3 class="display-occult text-white text-lg tracking-widest mb-6">Visual Foundations</h3>
+          <ul class="space-y-4 text-stone-500 font-light">
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Vector Logo Systems</li>
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Visual Identity Frameworks</li>
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Typography Documentation</li>
+          </ul>
+        </div>
+
+        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700">
+          <span class="material-symbols-outlined text-[#d4af37] text-4xl mb-6 font-thin">grid_view</span>
+          <h3 class="display-occult text-white text-lg tracking-widest mb-6">Asset Manifestation</h3>
+          <ul class="space-y-4 text-stone-500 font-light">
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Digital Asset Kits</li>
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Premium Print Production</li>
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Alchemy-led Packaging</li>
+          </ul>
+        </div>
+
+        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700">
+          <span class="material-symbols-outlined text-[#d4af37] text-4xl mb-6 font-thin">shield_moon</span>
+          <h3 class="display-occult text-white text-lg tracking-widest mb-6">System Guardianship</h3>
+          <ul class="space-y-4 text-stone-500 font-light">
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Brand Asset Management</li>
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Style Evolution Strategy</li>
+            <li class="flex items-start"><span class="text-[#8b0000] mr-3 text-xs">◆</span> Visual Consistency Audits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEAVE -->
+  <section class="py-24 md:py-40 relative bg-[#0a0a0a]" id="weave">
+    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8b0000]/30 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="flex flex-col md:flex-row gap-16 items-start">
+
+        <div class="md:w-1/3 md:sticky md:top-24 z-20 bg-[#0a0a0a]/95 backdrop-blur-md rounded-2xl p-6">
+          <span class="display-occult text-[#d4af37] tracking-[0.5em] text-[10px] uppercase mb-6 block">Website Development</span>
+          <h2 class="serif-sharp text-5xl md:text-7xl text-white mb-8 font-light">The Weave</h2>
+          <p class="text-stone-400 font-light leading-relaxed">
+            In the digital realm, we weave code and aesthetics into seamless rituals. Our development is mobile-first, secure, and built for transcendence.
+          </p>
+          <div class="mt-12 h-px w-24 bg-[#8b0000]"></div>
+        </div>
+
+        <div class="md:w-2/3 grid sm:grid-cols-2 gap-px bg-[#8b0000]/10 border border-[#8b0000]/10">
+          <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors">
+            <span class="material-symbols-outlined sigil-icon text-3xl mb-4">desktop_windows</span>
+            <h4 class="serif-sharp text-2xl text-white mb-2">Custom UI/UX</h4>
+            <p class="text-sm text-stone-500 font-light">Bespoke interfaces designed for intuitive journeying.</p>
+          </div>
+          <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors">
+            <span class="material-symbols-outlined sigil-icon text-3xl mb-4">shopping_cart</span>
+            <h4 class="serif-sharp text-2xl text-white mb-2">E-commerce</h4>
+            <p class="text-sm text-stone-500 font-light">Transactional systems for sacred commerce.</p>
+          </div>
+          <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors">
+            <span class="material-symbols-outlined sigil-icon text-3xl mb-4">menu_book</span>
+            <h4 class="serif-sharp text-2xl text-white mb-2">LMS &amp; Portals</h4>
+            <p class="text-sm text-stone-500 font-light">Membership sanctuaries and educational nodes.</p>
+          </div>
+          <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors">
+            <span class="material-symbols-outlined sigil-icon text-3xl mb-4">api</span>
+            <h4 class="serif-sharp text-2xl text-white mb-2">API Integrations</h4>
+            <p class="text-sm text-stone-500 font-light">Connecting disparate realities into one truth.</p>
+          </div>
+          <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors">
+            <span class="material-symbols-outlined sigil-icon text-3xl mb-4">smartphone</span>
+            <h4 class="serif-sharp text-2xl text-white mb-2">Mobile-First Dev</h4>
+            <p class="text-sm text-stone-500 font-light">Universal access across all glass portals.</p>
+          </div>
+          <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors">
+            <span class="material-symbols-outlined sigil-icon text-3xl mb-4">encrypted</span>
+            <h4 class="serif-sharp text-2xl text-white mb-2">Hosting &amp; Security</h4>
+            <p class="text-sm text-stone-500 font-light">Unbreakable shields for your digital temple.</p>
+          </div>
+          <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors sm:col-span-2">
+            <span class="material-symbols-outlined sigil-icon text-3xl mb-4">terminal</span>
+            <h4 class="serif-sharp text-2xl text-white mb-2">CMS Implementation</h4>
+            <p class="text-sm text-stone-500 font-light">Empowering your scribes with custom content tools.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="py-32 relative overflow-hidden bg-[#050505]" id="contact">
+    <div class="absolute inset-0 bg-weave opacity-20"></div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="serif-sharp text-4xl md:text-6xl text-white font-light italic mb-12">
+        "Follow the thread to where vision meets mastery."
+      </h2>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <a class="px-12 py-5 bg-[#8b0000] text-white display-occult tracking-widest text-xs hover:bg-[#8b0000]/80 transition-all border border-[#8b0000]" href="home.html#contact">
+          INITIALIZE PROJECT
+        </a>
+        <a class="px-12 py-5 border border-[#d4af37]/30 text-[#d4af37] display-occult tracking-widest text-xs hover:border-[#d4af37] transition-all" href="portfolio.html">
+          VIEW WORK
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-20 border-t border-[#8b0000]/20 bg-[#0a0a0a] relative">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
+      <div class="flex items-center space-x-3">
+        <span class="material-symbols-outlined text-[#8b0000] text-2xl font-thin">gesture</span>
+        <span class="display-occult text-xs tracking-[0.4em] text-white uppercase">The Red Thread Agency // MMXXIV</span>
+      </div>
+
+      <div class="flex space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase text-stone-600">
+        <a class="hover:text-[#d4af37] transition-colors" href="home.html">Home</a>
+        <a class="hover:text-[#d4af37] transition-colors" href="services.html">Services</a>
+        <a class="hover:text-[#d4af37] transition-colors" href="portfolio.html">The Gallery</a>
+      </div>
+
+      <div class="text-stone-700 display-occult text-[9px] tracking-[0.4em]">
+        CRAFTING THE UNSEEN
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu script (bottom of page) -->
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
       const btn = document.getElementById('mobileMenuButton');
       const menu = document.getElementById('mobileMenu');
@@ -335,6 +362,7 @@
       };
 
       btn.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         const willOpen = menu.classList.contains('hidden');
         menu.classList.toggle('hidden');
@@ -354,4 +382,6 @@
       });
     });
   </script>
-</body></html>
+
+</body>
+</html>
