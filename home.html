@@ -69,6 +69,39 @@ section {
         };
     </script>
 </head>
+    <script>
+  const btn = document.getElementById('mobileMenuButton');
+  const menu = document.getElementById('mobileMenu');
+
+  if (btn && menu) {
+    const closeMenu = () => {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    // Close when a link is clicked
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('a')) closeMenu();
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+</script>
 <body class="bg-background-dark text-silver font-sans selection:bg-primary/50 overflow-x-hidden bg-weave relative">
 <div class="fixed inset-0 pointer-events-none z-0">
 <div class="absolute left-1/4 h-full red-thread-vertical opacity-20"></div>
@@ -85,8 +118,29 @@ section {
 <a class="hover:text-primary transition-colors text-stone-400" href="portfolio.html">The Weave</a>
 <a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="#contact">Contact the Oracle</a>
 </div>
-<div class="md:hidden">
-<span class="material-symbols-outlined text-white">menu</span>
+<!-- Mobile menu button + dropdown -->
+<div class="md:hidden relative">
+  <button
+    id="mobileMenuButton"
+    type="button"
+    class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-primary hover:bg-white/5 transition"
+    aria-controls="mobileMenu"
+    aria-expanded="false"
+    aria-label="Open menu"
+  >
+    <span class="material-symbols-outlined text-3xl">menu</span>
+  </button>
+
+  <div
+    id="mobileMenu"
+    class="hidden absolute right-0 mt-3 w-64 rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
+  >
+    <div class="flex flex-col p-3 display-occult text-[10px] tracking-[0.3em] uppercase">
+      <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html">The Loom</a>
+      <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="portfolio.html">The Weave</a>
+      <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="#contact">Contact the Oracle</a>
+    </div>
+  </div>
 </div>
 </div>
 </nav>
