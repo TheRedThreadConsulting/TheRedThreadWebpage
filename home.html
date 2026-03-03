@@ -318,4 +318,23 @@ section {
 </div>
 </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Scroll Reveal ---
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+  });
+</script>
+
 </body></html>
