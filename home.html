@@ -1,340 +1,416 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Red Thread | Weaving the Unseen</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style type="text/tailwindcss">:root {
-    --primary-red: #8b0000;
-    --blood-accent: #f00;
-    --silver-text: #c0c0c0;
-    --muted-grey: #4a4a4a;
-    --deep-black: #050505;
-    --thread-width: 1px
-    }
-.orb-glow-crimson {
-    background: radial-gradient(circle, rgba(139, 0, 0, 0.5) 0%, rgba(50, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 70%);
-    filter: blur(40px)
-    }
-.text-silver {
-    color: var(--silver-text)
-    }
-.bg-weave {
-    background-image: linear-gradient(rgba(139, 0, 0, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 0, 0, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px
-    }
-.red-thread-vertical {
-    width: var(--thread-width);
-    background: linear-gradient(to bottom, transparent, var(--primary-red), transparent)
-    }
-.red-thread-horizontal {
-    height: var(--thread-width);
-    background: linear-gradient(to right, transparent, var(--primary-red), transparent)
-    }
-section {
-    scroll-margin-top: 80px
-    }
-.serif-sharp {
-    font-family: "Cormorant Garamond", serif
-    }
-.display-occult {
-    font-family: "Cinzel", serif
-    }
-.loom-texture {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA-gHvmOaT0bgzoVjjDf447Uxlo_lKlAcP8yT6qHv0esIG-yDadIgB5S_YXHOLH7XNNW2DcDGxdOvzkd_cprIdTh_FV26Wmi9VXl5y9ix9rluglOZjNw05MtbLbhjJkiro2ObKr157Oj3kXuO49BThR8Zgm7hjhdIP8RgIUYWf1tllwSCibT0OwmyafSaTnIZSG5JMu5V2Rsj6RvXr_JgStEAqOoF-Vbkg0GTdqO9w8MlYO37yMZO4cGZO_QdUp2hCDDF4GGYllCMo);
-    opacity: 0.05
-    /* Subtle scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 650ms ease, transform 650ms ease;
-}
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>The Red Thread | Weaving the Unseen</title>
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
 
-/* Respect reduced motion settings */
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-}
-    }</style>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#8b0000",
-                        accent: "#ff0000",
-                        silver: "#c0c0c0",
-                        "background-dark": "#050505",
-                    },
-                    fontFamily: {
-                        display: ["Cinzel", "serif"],
-                        serif: ["Cormorant Garamond", "serif"],
-                        sans: ["Inter", "sans-serif"],
-                    }
-                },
-            },
-        };
-    </script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+  <style type="text/tailwindcss">
+    :root {
+      --primary-red: #8b0000;
+      --blood-accent: #f00;
+      --silver-text: #c0c0c0;
+      --muted-grey: #4a4a4a;
+      --deep-black: #050505;
+      --thread-width: 1px
+    }
+
+    .orb-glow-crimson {
+      background: radial-gradient(circle, rgba(139, 0, 0, 0.5) 0%, rgba(50, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 70%);
+      filter: blur(40px)
+    }
+
+    .text-silver { color: var(--silver-text) }
+
+    .bg-weave {
+      background-image:
+        linear-gradient(rgba(139, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px
+    }
+
+    .red-thread-vertical {
+      width: var(--thread-width);
+      background: linear-gradient(to bottom, transparent, var(--primary-red), transparent)
+    }
+
+    .red-thread-horizontal {
+      height: var(--thread-width);
+      background: linear-gradient(to right, transparent, var(--primary-red), transparent)
+    }
+
+    section { scroll-margin-top: 80px }
+
+    .serif-sharp { font-family: "Cormorant Garamond", serif }
+    .display-occult { font-family: "Cinzel", serif }
+
+    .loom-texture {
+      background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA-gHvmOaT0bgzoVjjDf447Uxlo_lKlAcP8yT6qHv0esIG-yDadIgB5S_YXHOLH7XNNW2DcDGxdOvzkd_cprIdTh_FV26Wmi9VXl5y9ix9rluglOZjNw05MtbLbhjJkiro2ObKr157Oj3kXuO49BThR8Zgm7hjhdIP8RgIUYWf1tllwSCibT0OwmyafSaTnIZSG5JMu5V2Rsj6RvXr_JgStEAqOoF-Vbkg0GTdqO9w8MlYO37yMZO4cGZO_QdUp2hCDDF4GGYllCMo);
+      opacity: 0.05
+    }
+
+    /* Subtle scroll reveal (no color changes, minimal motion) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 650ms ease, transform 650ms ease;
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#8b0000",
+            accent: "#ff0000",
+            silver: "#c0c0c0",
+            "background-dark": "#050505",
+          },
+          fontFamily: {
+            display: ["Cinzel", "serif"],
+            serif: ["Cormorant Garamond", "serif"],
+            sans: ["Inter", "sans-serif"],
+          }
+        },
+      },
+    };
+  </script>
 </head>
+
 <body class="bg-background-dark text-silver font-sans selection:bg-primary/50 overflow-x-hidden bg-weave relative">
-<div class="fixed inset-0 pointer-events-none z-0">
-<div class="absolute left-1/4 h-full red-thread-vertical opacity-20"></div>
-<div class="absolute right-1/4 h-full red-thread-vertical opacity-20"></div>
-</div>
-<nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20">
-<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-<div class="flex items-center space-x-3 group">
-<span class="material-symbols-outlined text-primary text-3xl font-light">gesture</span>
-<span class="display-occult text-xl tracking-[0.3em] text-white">THE RED THREAD</span>
-</div>
-<div class="hidden md:flex items-center space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase">
-<a class="hover:text-primary transition-colors text-stone-400" href="services.html">The Loom</a>
-<a class="hover:text-primary transition-colors text-stone-400" href="portfolio.html">The Gallery</a>
-<a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="home.html#contact">Contact the Oracle</a>
-</div>
-<!-- Mobile menu button + dropdown -->
-<div class="md:hidden relative">
-  <button
-    id="mobileMenuButton"
-    type="button"
-    class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-primary hover:bg-white/5 transition"
-    aria-controls="mobileMenu"
-    aria-expanded="false"
-    aria-label="Open menu"
-  >
-    <span class="material-symbols-outlined text-3xl">menu</span>
-  </button>
-
-  <div
-    id="mobileMenu"
-    class="hidden absolute right-0 mt-3 w-64 z-50 rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
-  >
-    <div class="flex flex-col p-3 display-occult text-[10px] tracking-[0.3em] uppercase">
-      <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html">The Loom</a>
-      <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="portfolio.html">The Gallery</a>
-      <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="home.html#contact">Contact the Oracle</a>
-    </div>
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute left-1/4 h-full red-thread-vertical opacity-20"></div>
+    <div class="absolute right-1/4 h-full red-thread-vertical opacity-20"></div>
   </div>
-</div>
-</div>
-</nav>
-<header class="relative min-h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 loom-texture"></div>
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<div class="relative w-[500px] h-[500px] md:w-[800px] md:h-[800px]">
-<div class="absolute inset-0 orb-glow-crimson opacity-40"></div>
-<img alt="Atmospheric crimson depths" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 rounded-full shadow-[0_0_150px_rgba(139,0,0,0.4)] mix-blend-screen grayscale contrast-150 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dw9C-NyX7XWykVI7s5ftx8C6b3KtfUZNj-sQxNwmidayVFRoImfRa2u9wI2IdfJhuCWWKfiHGJE6P-I_qnNYLi0gbqBbGbZkrP0LC9MSJ6P86iKowF9gvAHDHWSQyQ5uWnJemKXXpj9KjxZ-ecfF5feuAVGe7liHzCxw5md-pTS43-DH5UQSkiuHir5zV2QmoS5YFCz4HeOHSSe8ehUnwjziKai5tYX0akHaIAR3sSiw0B72Gzhlju3ntl59AgSuQ8_-j4a3Z0c"/>
-</div>
-</div>
-<div class="absolute top-1/4 left-0 w-full red-thread-horizontal opacity-30"></div>
-<div class="absolute bottom-1/4 left-0 w-full red-thread-horizontal opacity-30"></div>
-<div class="relative z-10 max-w-5xl px-6 text-center">
-<h2 class="display-occult text-xs md:text-sm tracking-[0.6em] uppercase text-primary mb-8">Masters of Esoteric Craft</h2>
-<h1 class="serif-sharp text-5xl md:text-9xl text-white leading-[0.9] mb-10 font-light">
-                The unseen, woven<br/>
-<span class="italic text-silver opacity-80">with precision.</span>
-</h1>
-<p class="max-w-2xl mx-auto text-lg md:text-xl text-stone-400 font-light mb-14 leading-relaxed">
-                We are the architects of the invisible. The Red Thread weaves the narratives of the unseen, connecting your vision to the collective unconscious through master-level craftsmanship.
-            </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-8">
-<a class="group relative px-12 py-5 bg-primary text-white display-occult tracking-widest text-xs overflow-hidden transition-all duration-500 border border-primary hover:bg-transparent" href="services.html">
-<span class="relative z-10">THE LOOM</span>
-</a>
-<a class="px-12 py-5 border border-white/10 text-stone-400 display-occult tracking-widest text-xs hover:border-primary hover:text-white transition-all bg-white/5" href="portfolio.html">
-    THE GALLERY
-</a>
-</div>
-</div>
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-30 flex flex-col items-center">
-<div class="w-px h-24 bg-gradient-to-b from-transparent via-primary to-transparent mb-4"></div>
-<span class="material-symbols-outlined text-white text-3xl font-thin">expand_more</span>
-</div>
-</header>
-<section class="py-32 md:py-48 relative overflow-hidden" id="services">
-<div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary via-primary/20 to-transparent opacity-30"></div>
-<div class="max-w-7xl mx-auto px-6 relative">
-<div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
-<div class="max-w-3xl">
-<h3 class="display-occult text-primary tracking-[0.4em] uppercase text-xs mb-6">Technique &amp; Tradition</h3>
-<h2 class="serif-sharp text-4xl md:text-7xl text-white leading-tight font-light">Weaving the Narrative.</h2>
-</div>
-<div class="md:pt-4 border-l border-primary/20 pl-8">
-<p class="text-stone-500 max-w-xs font-light leading-relaxed italic">"Every brand is a tapestry of hidden symbols, waiting for the master's hand."</p>
-</div>
-</div>
-<div class="grid md:grid-cols-3 gap-px bg-primary/20 border border-primary/20">
-<div class="group relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
-<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-<span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">join_inner</span>
-<h4 class="serif-sharp text-3xl text-white mb-6 font-light">Ritualistic Design</h4>
-<p class="text-stone-500 font-light mb-8 leading-relaxed">
-                        Visual systems constructed with the precision of a loom. We develop icons that function as sigils, binding meaning to form in the weaver's tradition.
-                    </p>
-<ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-600">
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SYMBOLOGY ARCHITECTURE</li>
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SUB CULTURAL SEMIOTICS</li>
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>TYPOGRAPHIC ALCHEMY</li>
-</ul>
-</div>
-<div class="group relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
-<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-<span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">hub</span>
-<h4 class="serif-sharp text-3xl text-white mb-6 font-light">Digital Weaving</h4>
-<p class="text-stone-500 font-light mb-8 leading-relaxed">
-                        Digital temples built with interwoven code. We balance performance with immersive aesthetics to ensure your digital footprint is indelible.
-                    </p>
-<ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-600">
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>DARK-UI OPTIMIZATION</li>
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>INTERCONNECTED SYSTEMS</li>
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SECURE ARCHITECTURE</li>
-</ul>
-</div>
-<div class="group relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
-<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-<span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">linear_scale</span>
-<h4 class="serif-sharp text-3xl text-white mb-6 font-light">Narrative Strategy</h4>
-<p class="text-stone-500 font-light mb-8 leading-relaxed">
-                        Following the thread to the source. We navigate the occult market, ensuring your story bypasses the noise to reach the intended seeker.
-                    </p>
-<ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-600">
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>MARKET INTELLIGENCE</li>
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>THREAD-CRAFTING</li>
-<li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>AUTHORITY BUILDING</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class="py-40 relative overflow-hidden bg-black">
-<div class="absolute inset-0 orb-glow-crimson opacity-20"></div>
-<div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-20"></div>
-<div class="absolute bottom-0 left-0 w-full red-thread-horizontal opacity-20"></div>
-<div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-<h2 class="serif-sharp text-4xl md:text-6xl italic leading-tight text-white font-light mb-16">
-                "The thread of destiny is not merely followed; it is spun, woven, and dyed by those who know the secret paths."
-            </h2>
-<div class="flex items-center justify-center space-x-4 mb-10">
-<div class="h-px w-24 bg-gradient-to-r from-transparent to-primary"></div>
-<span class="material-symbols-outlined text-primary text-xl">gesture</span>
-<div class="h-px w-24 bg-gradient-to-l from-transparent to-primary"></div>
-</div>
-<p class="display-occult text-[10px] tracking-[0.5em] uppercase text-stone-500">The Axiom of The Red Thread</p>
-</div>
-<section class="py-32 md:py-48 bg-background-dark relative reveal" id="contact">
-  <div class="absolute top-0 left-10 h-full red-thread-vertical opacity-10"></div>
-  <div class="absolute top-0 right-10 h-full red-thread-vertical opacity-10"></div>
 
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-start relative z-10">
+  <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center space-x-3 group">
+        <span class="material-symbols-outlined text-primary text-3xl font-light">gesture</span>
+        <span class="display-occult text-xl tracking-[0.3em] text-white">THE RED THREAD</span>
+      </div>
 
-    <!-- Left column -->
-    <div class="sticky top-32">
-      <h3 class="display-occult text-primary tracking-[0.4em] uppercase text-xs mb-8">The Loom's Entry</h3>
-      <h2 class="serif-sharp text-5xl md:text-8xl text-white leading-tight mb-10 font-light italic">Carefully Woven Results.</h2>
-      <p class="text-xl text-stone-400 font-light mb-16 leading-relaxed max-w-lg">
-        Our loom is exclusive. If your vision requires the steady hand of a master weaver, pull the thread.
+      <div class="hidden md:flex items-center space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase">
+        <a class="hover:text-primary transition-colors text-stone-400" href="services.html">The Loom</a>
+        <a class="hover:text-primary transition-colors text-stone-400" href="portfolio.html">The Gallery</a>
+        <a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="home.html#contact">Contact the Oracle</a>
+      </div>
+
+      <!-- Mobile menu button + dropdown (FIXED: anchored + no stray >) -->
+      <div class="md:hidden relative">
+        <button
+          id="mobileMenuButton"
+          type="button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-primary hover:bg-white/5 transition"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+
+        <div
+          id="mobileMenu"
+          class="hidden absolute right-0 mt-3 w-64 z-50 rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
+        >
+          <div class="flex flex-col p-3 display-occult text-[10px] tracking-[0.3em] uppercase">
+            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html">The Loom</a>
+            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="portfolio.html">The Gallery</a>
+            <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="home.html#contact">Contact the Oracle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 loom-texture"></div>
+
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="relative w-[500px] h-[500px] md:w-[800px] md:h-[800px]">
+        <div class="absolute inset-0 orb-glow-crimson opacity-40"></div>
+        <img
+          alt="Atmospheric crimson depths"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 rounded-full shadow-[0_0_150px_rgba(139,0,0,0.4)] mix-blend-screen grayscale contrast-150 opacity-60"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dw9C-NyX7XWykVI7s5ftx8C6b3KtfUZNj-sQxNwmidayVFRoImfRa2u9wI2IdfJhuCWWKfiHGJE6P-I_qnNYLi0gbqBbGbZkrP0LC9MSJ6P86iKowF9gvAHDHWSQyQ5uWnJemKXXpj9KjxZ-ecfF5feuAVGe7liHzCxw5md-pTS43-DH5UQSkiuHir5zV2QmoS5YFCz4HeOHSSe8ehUnwjziKai5tYX0akHaIAR3sSiw0B72Gzhlju3ntl59AgSuQ8_-j4a3Z0c"
+        />
+      </div>
+    </div>
+
+    <div class="absolute top-1/4 left-0 w-full red-thread-horizontal opacity-30"></div>
+    <div class="absolute bottom-1/4 left-0 w-full red-thread-horizontal opacity-30"></div>
+
+    <!-- Added reveal ONLY to this text container (no color changes) -->
+    <div class="relative z-10 max-w-5xl px-6 text-center reveal">
+      <h2 class="display-occult text-xs md:text-sm tracking-[0.6em] uppercase text-primary mb-8">Masters of Esoteric Craft</h2>
+      <h1 class="serif-sharp text-5xl md:text-9xl text-white leading-[0.9] mb-10 font-light">
+        The unseen, woven<br/>
+        <span class="italic text-silver opacity-80">with precision.</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-stone-400 font-light mb-14 leading-relaxed">
+        We are the architects of the invisible. The Red Thread weaves the narratives of the unseen, connecting your vision to the collective unconscious through master-level craftsmanship.
       </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <a class="group relative px-12 py-5 bg-primary text-white display-occult tracking-widest text-xs overflow-hidden transition-all duration-500 border border-primary hover:bg-transparent" href="services.html">
+          <span class="relative z-10">THE LOOM</span>
+        </a>
+        <a class="px-12 py-5 border border-white/10 text-stone-400 display-occult tracking-widest text-xs hover:border-primary hover:text-white transition-all bg-white/5" href="portfolio.html">
+          THE GALLERY
+        </a>
+      </div>
     </div>
 
-  <!-- Right column -->
-<div class="relative w-full max-w-xl mx-auto md:max-w-none">
-
-  <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-primary opacity-50"></div>
-  <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-primary opacity-50"></div>
-
-  <!-- FORM STARTS HERE -->
-  <form name="contact"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        class="space-y-12 p-7 md:p-12 bg-stone-900/30 border border-primary/10 backdrop-blur-md">
-
-    <input type="hidden" name="form-name" value="contact">
-    <input type="hidden" name="_redirect" value="thanks.html">
-
-    <p class="hidden">
-      <label>Don’t fill this out: <input name="bot-field"></label>
-    </p>
-
-    <div>
-      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Name</label>
-      <input name="name" type="text" required
-             class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
-             placeholder="Name or Business" />
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-30 flex flex-col items-center">
+      <div class="w-px h-24 bg-gradient-to-b from-transparent via-primary to-transparent mb-4"></div>
+      <span class="material-symbols-outlined text-white text-3xl font-thin">expand_more</span>
     </div>
+  </header>
 
-    <div>
-      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Email</label>
-      <input name="email" type="email" required
-             class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
-             placeholder="your@email.com" />
+  <section class="py-32 md:py-48 relative overflow-hidden reveal" id="services">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary via-primary/20 to-transparent opacity-30"></div>
+    <div class="max-w-7xl mx-auto px-6 relative">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
+        <div class="max-w-3xl">
+          <h3 class="display-occult text-primary tracking-[0.4em] uppercase text-xs mb-6">Technique &amp; Tradition</h3>
+          <h2 class="serif-sharp text-4xl md:text-7xl text-white leading-tight font-light">Weaving the Narrative.</h2>
+        </div>
+        <div class="md:pt-4 border-l border-primary/20 pl-8">
+          <p class="text-stone-500 max-w-xs font-light leading-relaxed italic">"Every brand is a tapestry of hidden symbols, waiting for the master's hand."</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-px bg-primary/20 border border-primary/20">
+        <div class="group relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">join_inner</span>
+          <h4 class="serif-sharp text-3xl text-white mb-6 font-light">Ritualistic Design</h4>
+          <p class="text-stone-500 font-light mb-8 leading-relaxed">
+            Visual systems constructed with the precision of a loom. We develop icons that function as sigils, binding meaning to form in the weaver's tradition.
+          </p>
+          <ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-600">
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SYMBOLOGY ARCHITECTURE</li>
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SUB CULTURAL SEMIOTICS</li>
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>TYPOGRAPHIC ALCHEMY</li>
+          </ul>
+        </div>
+
+        <div class="group relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">hub</span>
+          <h4 class="serif-sharp text-3xl text-white mb-6 font-light">Digital Weaving</h4>
+          <p class="text-stone-500 font-light mb-8 leading-relaxed">
+            Digital temples built with interwoven code. We balance performance with immersive aesthetics to ensure your digital footprint is indelible.
+          </p>
+          <ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-600">
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>DARK-UI OPTIMIZATION</li>
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>INTERCONNECTED SYSTEMS</li>
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SECURE ARCHITECTURE</li>
+          </ul>
+        </div>
+
+        <div class="group relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">linear_scale</span>
+          <h4 class="serif-sharp text-3xl text-white mb-6 font-light">Narrative Strategy</h4>
+          <p class="text-stone-500 font-light mb-8 leading-relaxed">
+            Following the thread to the source. We navigate the occult market, ensuring your story bypasses the noise to reach the intended seeker.
+          </p>
+          <ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-600">
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>MARKET INTELLIGENCE</li>
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>THREAD-CRAFTING</li>
+            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>AUTHORITY BUILDING</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div>
-      <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">The Request</label>
-      <textarea name="message" required rows="5"
-                class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
-                placeholder="Describe the pattern you wish to weave..."></textarea>
+  <!-- FIXED: this section now properly closes before contact starts -->
+  <section class="py-40 relative overflow-hidden bg-black reveal">
+    <div class="absolute inset-0 orb-glow-crimson opacity-20"></div>
+    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-20"></div>
+    <div class="absolute bottom-0 left-0 w-full red-thread-horizontal opacity-20"></div>
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <h2 class="serif-sharp text-4xl md:text-6xl italic leading-tight text-white font-light mb-16">
+        "The thread of destiny is not merely followed; it is spun, woven, and dyed by those who know the secret paths."
+      </h2>
+
+      <div class="flex items-center justify-center space-x-4 mb-10">
+        <div class="h-px w-24 bg-gradient-to-r from-transparent to-primary"></div>
+        <span class="material-symbols-outlined text-primary text-xl">gesture</span>
+        <div class="h-px w-24 bg-gradient-to-l from-transparent to-primary"></div>
+      </div>
+
+      <p class="display-occult text-[10px] tracking-[0.5em] uppercase text-stone-500">The Axiom of The Red Thread</p>
     </div>
+  </section>
 
-    <button class="group relative w-full py-6 bg-primary text-white display-occult tracking-[0.4em] uppercase text-xs overflow-hidden" type="submit">
-      <span class="relative z-10">BEGIN THE WEAVE</span>
-      <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-    </button>
+  <section class="py-32 md:py-48 bg-background-dark relative reveal" id="contact">
+    <div class="absolute top-0 left-10 h-full red-thread-vertical opacity-10"></div>
+    <div class="absolute top-0 right-10 h-full red-thread-vertical opacity-10"></div>
 
-  </form>
-</div>
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-start relative z-10">
+      <!-- Left column -->
+      <div class="sticky top-32">
+        <h3 class="display-occult text-primary tracking-[0.4em] uppercase text-xs mb-8">The Loom's Entry</h3>
+        <h2 class="serif-sharp text-5xl md:text-8xl text-white leading-tight mb-10 font-light italic">Carefully Woven Results.</h2>
+        <p class="text-xl text-stone-400 font-light mb-16 leading-relaxed max-w-lg">
+          Our loom is exclusive. If your vision requires the steady hand of a master weaver, pull the thread.
+        </p>
+      </div>
 
-  </div>
-</section>
-<footer class="py-20 border-t border-primary/20 bg-background-dark relative">
-<div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10"></div>
-<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
-<div class="flex items-center space-x-3">
-<span class="material-symbols-outlined text-primary text-2xl font-thin">gesture</span>
-<span class="display-occult text-xs tracking-[0.4em] text-white uppercase">The Red Thread Agency // MMXXIV</span>
-</div>
-<div class="flex space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase text-stone-600">
-<a class="hover:text-primary transition-colors" href="services.html">The Loom</a>
-<a class="hover:text-primary transition-colors" href="portfolio.html">The Gallery</a>
-<a class="hover:text-primary transition-colors" href="home.html">Home</a>
-</div>
-<div class="text-stone-700 display-occult text-[9px] tracking-[0.4em]">
-                EVERY STITCH HAS MEANING
-            </div>
-</div>
-</footer>
+      <!-- Right column -->
+      <div class="relative w-full max-w-xl mx-auto md:max-w-none">
+        <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-primary opacity-50"></div>
+        <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-primary opacity-50"></div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-12 p-7 md:p-12 bg-stone-900/30 border border-primary/10 backdrop-blur-md"
+        >
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="_redirect" value="thanks.html">
 
-    // --- Scroll Reveal ---
-    const revealEls = document.querySelectorAll('.reveal');
+          <p class="hidden">
+            <label>Don’t fill this out: <input name="bot-field"></label>
+          </p>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.15 });
+          <div>
+            <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Name</label>
+            <input
+              name="name"
+              type="text"
+              required
+              class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
+              placeholder="Name or Business"
+            />
+          </div>
 
-    revealEls.forEach(el => observer.observe(el));
+          <div>
+            <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">Email</label>
+            <input
+              name="email"
+              type="email"
+              required
+              class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
+              placeholder="your@email.com"
+            />
+          </div>
 
-  });
-</script>
+          <div>
+            <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-stone-500">The Request</label>
+            <textarea
+              name="message"
+              required
+              rows="5"
+              class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-stone-800"
+              placeholder="Describe the pattern you wish to weave..."
+            ></textarea>
+          </div>
 
-</body></html>
+          <button class="group relative w-full py-6 bg-primary text-white display-occult tracking-[0.4em] uppercase text-xs overflow-hidden" type="submit">
+            <span class="relative z-10">BEGIN THE WEAVE</span>
+            <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-20 border-t border-primary/20 bg-background-dark relative">
+    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
+      <div class="flex items-center space-x-3">
+        <span class="material-symbols-outlined text-primary text-2xl font-thin">gesture</span>
+        <span class="display-occult text-xs tracking-[0.4em] text-white uppercase">The Red Thread Agency // MMXXIV</span>
+      </div>
+
+      <div class="flex space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase text-stone-600">
+        <a class="hover:text-primary transition-colors" href="services.html">The Loom</a>
+        <a class="hover:text-primary transition-colors" href="portfolio.html">The Gallery</a>
+        <a class="hover:text-primary transition-colors" href="home.html">Home</a>
+      </div>
+
+      <div class="text-stone-700 display-occult text-[9px] tracking-[0.4em]">
+        EVERY STITCH HAS MEANING
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts at bottom (correct placement). No color changes. -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu
+      const btn = document.getElementById('mobileMenuButton');
+      const menu = document.getElementById('mobileMenu');
+
+      if (btn && menu) {
+        const closeMenu = () => {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        };
+
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const willOpen = menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(willOpen));
+        });
+
+        menu.addEventListener('click', (e) => {
+          if (e.target.closest('a')) closeMenu();
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeMenu();
+        });
+      }
+
+      // Scroll reveal (only affects elements you mark with .reveal)
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const revealEls = document.querySelectorAll('.reveal');
+      if (!revealEls.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+      }, { threshold: 0.15 });
+
+      revealEls.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
