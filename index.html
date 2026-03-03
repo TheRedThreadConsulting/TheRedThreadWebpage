@@ -35,7 +35,7 @@
     /* Orb Position */
     .orb-link {
       position: absolute;
-      left: 50%;
+      left: 55%;
       top: 43%;                 /* centers it in the gate opening */
       transform: translate(-50%, -50%);
       width: clamp(160px, 16vw, 260px);
@@ -214,17 +214,48 @@
     }
 
     /* Mobile overrides */
-    @media (max-width: 768px){
-      body{
-        background-size: contain;
-      }
+   @media (max-width: 768px){
 
-      .orb-link{
-        top: 44%; /* nudge into opening on mobile */
-        width: clamp(120px, 28vw, 200px);
-        height: clamp(120px, 28vw, 200px);
-      }
+  /* Fix background scaling so no black bars appear */
+  body{
+    background-size: cover;
+    background-position: center;
+  }
 
+  /* Adjust orb size and position for phones */
+  .orb-link{
+    top: 44%;
+    width: clamp(120px, 28vw, 200px);
+    height: clamp(120px, 28vw, 200px);
+  }
+
+  /* Move "FOLLOW THE PATH" below the orb */
+  .orb-cta{
+    top: auto;
+    left: 50%;
+    bottom: -52px;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+
+  .orb-cta .label{
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.22);
+    border-color: rgba(255, 210, 120, 0.18);
+  }
+
+  .orb-cta .hint{
+    display: none;
+  }
+
+  /* shorten the path line on mobile */
+  .thread-path{
+    height: 160px;
+  }
+
+}
       .thread-path{
         top: calc(44% + 92px);
         height: 200px;
