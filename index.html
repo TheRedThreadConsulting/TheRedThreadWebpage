@@ -1,177 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Red Thread Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Red Thread Portal</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html, body {
-  height: 100%;
-  background: black;
-  overflow: hidden;
-  font-family: sans-serif;
-}
+    html, body {
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
 
-/* Gate Background */
-body{
-  background-image: url("darkgate.png"); /* or whatever your path is */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;     /* desktop default */
-  background-color: #000;
-  min-height: 100vh;
-}
-}
+    /* Gate Background */
+    body{
+      background-image: url("darkgate.png"); /* same folder as this HTML */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;     /* desktop default */
+      background-color: #000;
+      min-height: 100vh;
+    }
 
-/* Wrapper */
-.portal-wrapper {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
+    /* Wrapper */
+    .portal-wrapper {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
 
-/* Orb Position (adjust top % if needed) */
-.orb-link {
-  position: absolute;
-  left: 50%;
-  top: 43%;   /* 👈 This centers it in gate opening */
-  transform: translate(-50%, -50%);
-  width: clamp(160px, 16vw, 260px);
-  height: clamp(160px, 16vw, 260px);
-  display: block;
-}
+    /* Orb Position */
+    .orb-link {
+      position: absolute;
+      left: 50%;
+      top: 43%;                 /* centers it in the gate opening */
+      transform: translate(-50%, -50%);
+      width: clamp(160px, 16vw, 260px);
+      height: clamp(160px, 16vw, 260px);
+      display: block;
+      text-decoration: none;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-/* Orb Core */
-.orb {
-  position: absolute;
-  inset: 0;
+    /* Make focus visible but tasteful */
+    .orb-link:focus-visible {
+      outline: 2px solid rgba(255, 210, 120, 0.6);
+      outline-offset: 10px;
+      border-radius: 24px;
+    }
 
-  border-radius: 46% 54% 52% 48% / 55% 45% 58% 42%;
+    /* Orb Core */
+    .orb {
+      position: absolute;
+      inset: 0;
+      border-radius: 46% 54% 52% 48% / 55% 45% 58% 42%;
 
-  background:
-    radial-gradient(closest-side at 45% 40%,
-      rgba(255,240,190,1),
-      rgba(255,210,120,0.95) 40%,
-      rgba(220,80,40,0.35) 70%,
-      rgba(0,0,0,0) 78%
-    );
+      background:
+        radial-gradient(closest-side at 45% 40%,
+          rgba(255,240,190,1),
+          rgba(255,210,120,0.95) 40%,
+          rgba(220,80,40,0.35) 70%,
+          rgba(0,0,0,0) 78%
+        );
 
-  filter:
-    drop-shadow(0 0 25px rgba(255,220,140,0.9))
-    drop-shadow(0 0 90px rgba(230,80,40,0.7));
+      filter:
+        drop-shadow(0 0 25px rgba(255,220,140,0.9))
+        drop-shadow(0 0 90px rgba(230,80,40,0.7));
 
-  animation: breathe 4s ease-in-out infinite;
-}
+      animation: breathe 4s ease-in-out infinite;
+    }
 
-/* Soft Expanding Glow */
-.floor-glow {
-  position: absolute;
-  width: 550%;
-  height: 380%;
-  left: 50%;
-  top: 170%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+    /* Soft Expanding Glow */
+    .floor-glow {
+      position: absolute;
+      width: 550%;
+      height: 380%;
+      left: 50%;
+      top: 170%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
 
-  background:
-    radial-gradient(closest-side,
-      rgba(255,210,120,0.4) 0%,
-      rgba(255,210,120,0.25) 25%,
-      rgba(220,80,40,0.12) 45%,
-      rgba(0,0,0,0) 70%
-    );
+      background:
+        radial-gradient(closest-side,
+          rgba(255,210,120,0.4) 0%,
+          rgba(255,210,120,0.25) 25%,
+          rgba(220,80,40,0.12) 45%,
+          rgba(0,0,0,0) 70%
+        );
 
-  filter: blur(30px);
-  opacity: 0.85;
+      filter: blur(30px);
+      opacity: 0.85;
+      animation: glowBreath 4s ease-in-out infinite;
+    }
 
-  animation: glowBreath 4s ease-in-out infinite;
-}
+    @keyframes breathe {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.75;
+        filter:
+          drop-shadow(0 0 25px rgba(255,220,140,0.8))
+          drop-shadow(0 0 70px rgba(230,80,40,0.6));
+      }
+      50% {
+        transform: scale(1.22);
+        opacity: 1;
+        filter:
+          drop-shadow(0 0 45px rgba(255,240,190,1))
+          drop-shadow(0 0 150px rgba(230,80,40,1));
+      }
+    }
 
-@keyframes breathe {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.75;
-    filter:
-      drop-shadow(0 0 25px rgba(255,220,140,0.8))
-      drop-shadow(0 0 70px rgba(230,80,40,0.6));
-  }
-  50% {
-    transform: scale(1.22);
-    opacity: 1;
-    filter:
-      drop-shadow(0 0 45px rgba(255,240,190,1))
-      drop-shadow(0 0 150px rgba(230,80,40,1));
-  }
-}
+    @keyframes glowBreath {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 1;
+      }
+    }
 
-@keyframes glowBreath {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.3);
-    opacity: 1;
-  }
-}
+    /* ---------- CTA overlay on the orb ---------- */
+    .orb-cta {
+      position: absolute;
+      left: 50%;
+      top: 52%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none; /* keeps the whole orb clickable */
+      width: 120%;
+    }
 
-@media (prefers-reduced-motion: reduce) {
-  .orb, .floor-glow {
-    animation: none;
-  }
-  @media (max-width: 768px){
-  .orb-link{
-    top: 44%; /* nudge into the opening on mobile */
-    width: clamp(120px, 28vw, 200px);
-    height: clamp(120px, 28vw, 200px);
-  }
-}
-}
- 
-</style>
-  <head>
-<style>
-  }
-.orb-link {
-  position: absolute;
-  left: 50%;
-  top: 42%;
-  transform: translate(-50%, -50%);
-}
+    .orb-cta .label {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
 
-/* 👇 ADD MOBILE OVERRIDES BELOW EVERYTHING ELSE */
+      /* subtle glass */
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255, 210, 120, 0.25);
+      backdrop-filter: blur(6px);
 
-@media (max-width: 768px){
-  body{
-    background-size: contain;
-  }
+      color: rgba(255, 245, 225, 0.95);
+      letter-spacing: 0.32em;
+      font-size: 11px;
+      text-transform: uppercase;
 
-  .orb-link{
-    top: 44%;
-    width: clamp(120px, 28vw, 200px);
-    height: clamp(120px, 28vw, 200px);
-  }
-}
+      text-shadow: 0 0 18px rgba(255, 210, 120, 0.25);
+    }
 
-</style>
-</head>
+    .orb-cta .hint {
+      margin-top: 10px;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255, 210, 120, 0.65);
+      opacity: 0.9;
+    }
+
+    /* Slight hover emphasis (desktop only feel) */
+    .orb-link:hover .label {
+      border-color: rgba(255, 210, 120, 0.45);
+      background: rgba(0,0,0,0.42);
+    }
+
+    /* ---------- Optional upgrade: the PATH thread ---------- */
+    .thread-path {
+      position: absolute;
+      left: 50%;
+      top: calc(43% + 120px); /* starts just below orb */
+      transform: translateX(-50%);
+      width: 2px;
+      height: 240px;
+      opacity: 0.35;
+
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 210, 120, 0.15),
+        rgba(220, 80, 40, 0.22),
+        rgba(255, 210, 120, 0.15),
+        transparent
+      );
+    }
+
+    .thread-path::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+
+      background: rgba(255, 210, 120, 0.85);
+      box-shadow:
+        0 0 10px rgba(255, 210, 120, 0.55),
+        0 0 26px rgba(220, 80, 40, 0.35);
+
+      animation: threadPulse 3.2s linear infinite;
+    }
+
+    @keyframes threadPulse {
+      0% { top: 0%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+
+    /* Mobile overrides */
+    @media (max-width: 768px){
+      body{
+        background-size: contain;
+      }
+
+      .orb-link{
+        top: 44%; /* nudge into opening on mobile */
+        width: clamp(120px, 28vw, 200px);
+        height: clamp(120px, 28vw, 200px);
+      }
+
+      .thread-path{
+        top: calc(44% + 92px);
+        height: 200px;
+        opacity: 0.30;
+      }
+
+      .orb-cta .label{
+        font-size: 10px;
+        letter-spacing: 0.28em;
+        padding: 9px 12px;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .orb, .floor-glow, .thread-path::after {
+        animation: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="portal-wrapper">
 
-<div class="portal-wrapper">
- <a href="home.html" class="orb-link">
-    <div class="orb"></div>
-    <div class="floor-glow"></div>
-  </a>
-</div>
+    <!-- The path (subtle thread line + traveling bead) -->
+    <div class="thread-path" aria-hidden="true"></div>
 
+    <!-- Clickable orb -->
+    <a href="home.html" class="orb-link" aria-label="Follow the path to enter">
+      <div class="orb"></div>
+      <div class="floor-glow"></div>
+
+      <!-- CTA overlay -->
+      <div class="orb-cta" aria-hidden="true">
+        <span class="label">FOLLOW THE PATH</span>
+        <div class="hint">Tap to enter</div>
+      </div>
+    </a>
+
+  </div>
 </body>
 </html>
