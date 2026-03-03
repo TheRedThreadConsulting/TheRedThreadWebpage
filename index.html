@@ -15,14 +15,44 @@
       font-family: sans-serif;
     }
 
-    /* Gate Background */
+    /* =========================================================
+       ONE-PLACE TUNING (the “auto-center” practical version)
+       Change ONLY these if the gate opening shifts:
+       ========================================================= */
+    :root{
+      --orb-top: 43%;        /* desktop orb vertical position */
+      --thread-start: calc(var(--orb-top) + 120px);
+      --thread-height: 240px;
+    }
+
+    /* Mobile tune in ONE place (if needed) */
+    @media (max-width: 768px){
+      :root{
+        --orb-top: 44%;      /* mobile orb vertical position */
+        --thread-start: calc(var(--orb-top) + 92px);
+        --thread-height: 180px;
+      }
+    }
+
+    /* =========================================================
+       Background images (desktop vs mobile)
+       ========================================================= */
     body{
-      background-image: url("darkgate.png"); /* same folder as this HTML */
+      background-image: url("darkgate.png");   /* desktop landscape */
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;     /* desktop default */
+      background-size: cover;
       background-color: #000;
       min-height: 100vh;
+    }
+
+    /* Use your portrait image on mobile + contain */
+    @media (max-width: 768px){
+      body{
+        background-image: url("mobileindex.png");
+        background-size: contain;
+        background-position: center;
+      }
     }
 
     /* Wrapper */
@@ -32,11 +62,11 @@
       position: relative;
     }
 
-    /* Orb Position */
+    /* Orb Link Position */
     .orb-link {
       position: absolute;
-      left: 55%;
-      top: 43%;                 /* centers it in the gate opening */
+      left: 50%;
+      top: var(--orb-top);
       transform: translate(-50%, -50%);
       width: clamp(160px, 16vw, 260px);
       height: clamp(160px, 16vw, 260px);
@@ -46,7 +76,14 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    /* Make focus visible but tasteful */
+    @media (max-width: 768px){
+      .orb-link{
+        width: clamp(120px, 28vw, 200px);
+        height: clamp(120px, 28vw, 200px);
+      }
+    }
+
+    /* Focus state (tasteful, accessible) */
     .orb-link:focus-visible {
       outline: 2px solid rgba(255, 210, 120, 0.6);
       outline-offset: 10px;
@@ -58,7 +95,6 @@
       position: absolute;
       inset: 0;
       border-radius: 46% 54% 52% 48% / 55% 45% 58% 42%;
-
       background:
         radial-gradient(closest-side at 45% 40%,
           rgba(255,240,190,1),
@@ -83,7 +119,6 @@
       top: 170%;
       transform: translate(-50%, -50%);
       pointer-events: none;
-
       background:
         radial-gradient(closest-side,
           rgba(255,210,120,0.4) 0%,
@@ -91,7 +126,6 @@
           rgba(220,80,40,0.12) 45%,
           rgba(0,0,0,0) 70%
         );
-
       filter: blur(30px);
       opacity: 0.85;
       animation: glowBreath 4s ease-in-out infinite;
@@ -125,15 +159,18 @@
       }
     }
 
-    /* ---------- CTA overlay on the orb ---------- */
+    /* =========================================================
+       CTA overlay (desktop: centered over orb)
+       mobile: placed BELOW orb so it doesn't block it
+       ========================================================= */
     .orb-cta {
       position: absolute;
       left: 50%;
       top: 52%;
       transform: translate(-50%, -50%);
       text-align: center;
-      pointer-events: none; /* keeps the whole orb clickable */
-      width: 120%;
+      pointer-events: none; /* keeps whole orb clickable */
+      width: 130%;
     }
 
     .orb-cta .label {
@@ -141,7 +178,6 @@
       padding: 10px 14px;
       border-radius: 999px;
 
-      /* subtle glass */
       background: rgba(0,0,0,0.35);
       border: 1px solid rgba(255, 210, 120, 0.25);
       backdrop-filter: blur(6px);
@@ -150,7 +186,6 @@
       letter-spacing: 0.32em;
       font-size: 11px;
       text-transform: uppercase;
-
       text-shadow: 0 0 18px rgba(255, 210, 120, 0.25);
     }
 
@@ -160,23 +195,42 @@
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: rgba(255, 210, 120, 0.65);
-      opacity: 0.9;
     }
 
-    /* Slight hover emphasis (desktop only feel) */
-    .orb-link:hover .label {
+    .orb-link:hover .orb-cta .label {
       border-color: rgba(255, 210, 120, 0.45);
       background: rgba(0,0,0,0.42);
     }
 
-    /* ---------- Optional upgrade: the PATH thread ---------- */
+    @media (max-width: 768px){
+      .orb-cta{
+        top: auto;
+        bottom: -52px;               /* sits below orb */
+        transform: translateX(-50%);
+        width: max-content;
+      }
+      .orb-cta .label{
+        font-size: 10px;
+        letter-spacing: 0.26em;
+        padding: 8px 12px;
+        background: rgba(0,0,0,0.22);
+        border-color: rgba(255, 210, 120, 0.18);
+      }
+      .orb-cta .hint{
+        display: none;               /* keeps mobile clean */
+      }
+    }
+
+    /* =========================================================
+       Optional upgrade: Thread “Path” (aligned to orb via vars)
+       ========================================================= */
     .thread-path {
       position: absolute;
       left: 50%;
-      top: calc(43% + 120px); /* starts just below orb */
+      top: var(--thread-start);
       transform: translateX(-50%);
       width: 2px;
-      height: 240px;
+      height: var(--thread-height);
       opacity: 0.35;
 
       background: linear-gradient(
@@ -187,6 +241,7 @@
         rgba(255, 210, 120, 0.15),
         transparent
       );
+      pointer-events: none;
     }
 
     .thread-path::after {
@@ -213,67 +268,9 @@
       100% { top: 100%; opacity: 0; }
     }
 
-    /* Mobile overrides */
-   @media (max-width: 768px){
-
-  /* Fix background scaling so no black bars appear */
-  body{
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Adjust orb size and position for phones */
-  .orb-link{
-    top: 44%;
-    width: clamp(120px, 28vw, 200px);
-    height: clamp(120px, 28vw, 200px);
-  }
-
-  /* Move "FOLLOW THE PATH" below the orb */
-  .orb-cta{
-    top: auto;
-    left: 50%;
-    bottom: -52px;
-    transform: translateX(-50%);
-    width: max-content;
-  }
-
-  .orb-cta .label{
-    font-size: 10px;
-    letter-spacing: 0.26em;
-    padding: 8px 12px;
-    background: rgba(0,0,0,0.22);
-    border-color: rgba(255, 210, 120, 0.18);
-  }
-
-  .orb-cta .hint{
-    display: none;
-  }
-
-  /* shorten the path line on mobile */
-  .thread-path{
-    height: 160px;
-  }
-
-}
-      .thread-path{
-        top: calc(44% + 92px);
-        height: 200px;
-        opacity: 0.30;
-      }
-
-      .orb-cta .label{
-        font-size: 10px;
-        letter-spacing: 0.28em;
-        padding: 9px 12px;
-      }
-    }
-
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      .orb, .floor-glow, .thread-path::after {
-        animation: none !important;
-      }
+      .orb, .floor-glow, .thread-path::after { animation: none !important; }
     }
   </style>
 </head>
@@ -281,7 +278,7 @@
 <body>
   <div class="portal-wrapper">
 
-    <!-- The path (subtle thread line + traveling bead) -->
+    <!-- Subtle path line + traveling bead -->
     <div class="thread-path" aria-hidden="true"></div>
 
     <!-- Clickable orb -->
