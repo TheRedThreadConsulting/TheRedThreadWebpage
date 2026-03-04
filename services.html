@@ -61,11 +61,48 @@
     }
 
     section { scroll-margin-top: 92px; }
+    section { scroll-margin-top: 92px; }
+
+/* ---- Subtle scroll reveal ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 650ms ease, transform 650ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Hover shimmer ---- */
+.sigil-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.sigil-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 55%);
+  transform: translateX(-30%) translateY(30%);
+  opacity: 0;
+  transition: opacity 600ms ease;
+  pointer-events: none;
+}
+
+.sigil-shimmer:hover::after {
+  opacity: 1;
+}
+
+</style>
   </style>
 </head>
 
 <body class="bg-[#050505] text-stone-300 font-[Inter] selection:bg-[#8b0000]/50 overflow-x-hidden bg-weave relative">
-
+<div class="progress-thread" id="progressThread"></div>
   <!-- Background Threads -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
     <div class="red-thread-path top-[10%] -rotate-2"></div>
@@ -128,7 +165,7 @@
   <header class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-24">
     <div class="absolute inset-0 loom-texture"></div>
 
-    <div class="relative z-10 max-w-5xl px-6 text-center">
+    <div class="relative z-10 max-w-5xl px-6 text-center reveal">
       <h2 class="display-occult text-xs md:text-sm tracking-[0.6em] uppercase text-[#8b0000] mb-8">Services Directory</h2>
 
       <h1 class="serif-sharp text-5xl md:text-8xl text-white leading-[0.9] mb-10 font-light">
@@ -147,7 +184,7 @@
     <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8b0000]/30 to-transparent"></div>
 
     <div class="max-w-7xl mx-auto px-6 relative">
-      <div class="grid md:grid-cols-2 gap-20 items-center">
+      <div class="grid md:grid-cols-2 gap-20 items-center reveal">
 
         <div>
           <span class="display-occult text-[#d4af37] tracking-[0.5em] text-[10px] uppercase mb-6 block">
@@ -217,7 +254,7 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-12">
-        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700">
+        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700 reveal sigil-shimmer">
           <span class="material-symbols-outlined text-[#d4af37] text-4xl mb-6 font-thin">pentagon</span>
           <h3 class="display-occult text-white text-lg tracking-widest mb-6">Visual Foundations</h3>
           <ul class="space-y-4 text-stone-500 font-light">
@@ -227,7 +264,7 @@
           </ul>
         </div>
 
-        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700">
+        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700 reveal sigil-shimmer">
           <span class="material-symbols-outlined text-[#d4af37] text-4xl mb-6 font-thin">grid_view</span>
           <h3 class="display-occult text-white text-lg tracking-widest mb-6">Asset Manifestation</h3>
           <ul class="space-y-4 text-stone-500 font-light">
@@ -237,7 +274,7 @@
           </ul>
         </div>
 
-        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700">
+        <div class="p-8 border border-white/5 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#d4af37]/30 transition-all duration-700 reveal sigil-shimmer">
           <span class="material-symbols-outlined text-[#d4af37] text-4xl mb-6 font-thin">shield_moon</span>
           <h3 class="display-occult text-white text-lg tracking-widest mb-6">System Guardianship</h3>
           <ul class="space-y-4 text-stone-500 font-light">
@@ -266,7 +303,7 @@
           <div class="mt-12 h-px w-24 bg-[#8b0000]"></div>
         </div>
 
-        <div class="md:w-2/3 grid sm:grid-cols-2 gap-px bg-[#8b0000]/10 border border-[#8b0000]/10">
+       <div class="md:w-2/3 grid sm:grid-cols-2 gap-px bg-[#8b0000]/10 border border-[#8b0000]/10 reveal">
           <div class="p-10 bg-[#0a0a0a] hover:bg-black transition-colors">
             <span class="material-symbols-outlined sigil-icon text-3xl mb-4">desktop_windows</span>
             <h4 class="serif-sharp text-2xl text-white mb-2">Custom UI/UX</h4>
@@ -347,6 +384,40 @@
     </div>
   </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // ---- Scroll reveal ----
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = document.querySelectorAll('.reveal');
+
+    if (!prefersReduced && revealEls.length) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.15 });
+
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      // If reduced motion, just show everything
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // ---- Optional: progress thread ----
+    const bar = document.getElementById('progressThread');
+    if (bar) {
+      const onScroll = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const p = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = `${Math.min(100, Math.max(0, p))}%`;
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+  });
+</script>
+  
   <!-- Mobile menu script (bottom of page) -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
