@@ -15,12 +15,18 @@
   <style type="text/tailwindcss">
     :root {
       --primary-red: #8b0000;
+      --accent-red-text: #c43a3a;
       --gold-accent: #d4af37;
       --silver-accent: #c0c0c0;
       --deep-black: #050505;
       --charcoal: #0a0a0a;
       --thread-width: 1px;
-    }
+   }
+  
+   .accent-label {
+  color: var(--accent-red-text);
+  text-shadow: 0 0 10px rgba(196, 58, 58, 0.18);
+   }
 
     .bg-weave {
       background-image: radial-gradient(circle at 2px 2px, rgba(139, 0, 0, 0.15) 1px, transparent 0);
@@ -226,7 +232,7 @@
 
         <div class="mt-6 md:mt-8 flex justify-between items-start gap-4">
           <div>
-            <span class="display-occult text-[9px] tracking-[0.4em] text-[#8b0000] uppercase">The Pattern</span>
+           <span class="display-occult text-[10px] md:text-[9px] tracking-[0.4em] accent-label uppercase font-semibold">The Weave</span>
             <h3 class="serif-sharp text-2xl md:text-3xl text-white mt-2 font-light">Sacred Graphic Design</h3>
             <p class="serif-sharp italic text-stone-500 text-lg md:text-xl">Divine geometry meets modern aesthetics</p>
           </div>
@@ -245,7 +251,7 @@
         </div>
 
         <div class="mt-6 md:mt-8">
-          <span class="display-occult text-[9px] tracking-[0.4em] text-[#8b0000] uppercase">The Pattern</span>
+          <span class="display-occult text-[10px] md:text-[9px] tracking-[0.4em] accent-label uppercase font-semibold">The Pattern</span>
           <h3 class="serif-sharp text-2xl text-white mt-2 font-light">Sigil-inspired Packaging Design</h3>
         </div>
       </article>
@@ -318,7 +324,7 @@
         </div>
 
         <div class="mt-6 md:mt-8">
-          <span class="display-occult text-[9px] tracking-[0.4em] text-[#8b0000] uppercase">The Weave</span>
+          <span class="display-occult text-[10px] md:text-[9px] tracking-[0.4em] accent-label uppercase font-semibold">The Threshold</span>
           <h3 class="serif-sharp text-3xl text-white mt-2 font-light">
             <a href="https://linktr.ee/theredthreadconsulting" target="_blank" rel="noopener" class="title-link">
               Ritualized UI Frameworks
@@ -380,7 +386,7 @@
         </div>
 
         <div class="mt-8 md:mt-12 text-center px-2">
-          <span class="display-occult text-[9px] tracking-[0.4em] text-[#8b0000] uppercase">The Pattern</span>
+         <span class="display-occult text-[10px] md:text-[9px] tracking-[0.4em] accent-label uppercase font-semibold">The Loom</span>
           <h3 class="serif-sharp text-3xl md:text-4xl text-white mt-2 font-light">Esoteric Print Collateral</h3>
           <p class="serif-sharp italic text-stone-500 text-lg md:text-xl mt-2">Tactile manifestations of the unseen</p>
         </div>
@@ -411,7 +417,7 @@
   <footer class="py-16 md:py-20 border-t border-white/5 bg-[#050505] relative">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 relative z-10 text-center md:text-left">
       <div class="flex items-center space-x-3">
-        <span class="material-symbols-outlined text-[#8b0000] text-2xl font-thin">gesture</span>
+        <span class="material-symbols-outlined text-[#c43a3a] text-2xl font-thin">gesture</span>
         <span class="display-occult text-[9px] tracking-[0.4em] text-stone-500 uppercase">The Red Thread // MMXXIV</span>
       </div>
 
