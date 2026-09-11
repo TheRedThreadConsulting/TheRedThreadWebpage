@@ -213,20 +213,20 @@
             </div>
           </div>
           
-         <!-- Card 2 -->
-        <div class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal" style="transition-delay: 100ms;">
-          <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
-            <div class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" data-alt="Spiritual symbol based logo system layout" style='background-image: url("moth.PNG");'></div>
-            <div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
-          </div>
-          <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
-            <div>
-              <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">SYSTEM 02 // ARCHETYPE</span>
-              <p class="serif-sharp text-stone-300 group-hover:text-[#d4af37] transition-colors text-xl tracking-wide">Void &amp; Vessel Branding</p>
+          <!-- Card 2 -->
+          <div class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal" style="transition-delay: 100ms;">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
+              <div class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" data-alt="Spiritual symbol based logo system layout" style='background-image: url("moth.PNG");'></div>
+              <div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
             </div>
-            <span class="display-occult text-[10px] text-stone-600 tracking-widest">[02]</span>
+            <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
+              <div>
+                <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">SYSTEM 02 // ARCHETYPE</span>
+                <p class="serif-sharp text-stone-300 group-hover:text-[#d4af37] transition-colors text-xl tracking-wide">Void &amp; Vessel Branding</p>
+              </div>
+              <span class="display-occult text-[10px] text-stone-600 tracking-widest">[02]</span>
+            </div>
           </div>
-        </div>
           
           <!-- Card 3 -->
           <div class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal" style="transition-delay: 200ms;">
@@ -236,12 +236,14 @@
             </div>
             <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
               <div>
-                <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">SYSTEM 03 // CONCENCRATION</span>
+                <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">SYSTEM 03 // CONVECRATION</span>
                 <p class="serif-sharp text-stone-300 group-hover:text-[#d4af37] transition-colors text-xl tracking-wide">Ethereal Constructs</p>
               </div>
               <span class="display-occult text-[10px] text-stone-600 tracking-widest">[03]</span>
             </div>
           </div>
+        </div>
+      </section>
 
       <!-- Decorative Thread Break -->
       <div class="flex justify-center items-center gap-6 my-16 reveal">
@@ -250,7 +252,7 @@
         <div class="h-px w-28 bg-gradient-to-l from-transparent to-primary"></div>
       </div>
 
-    <!-- Logo Systems Marquee Grid -->
+      <!-- Logo Systems Marquee Grid -->
       <section class="mb-32 relative overflow-hidden">
         <div class="text-center mb-16 reveal">
           <span class="display-occult text-[10px] tracking-[0.3em] text-stone-500 uppercase block mb-4">SACRED GLYPHS</span>
@@ -261,13 +263,11 @@
         <style>
           @keyframes scroll-left {
             0% { transform: translateX(0); }
-            /* Shifts the row left by 100% of its width plus the 2rem (gap-8) space between the rows */
             100% { transform: translateX(calc(-100% - 2rem)); }
           }
           .animate-marquee {
             animation: scroll-left 35s linear infinite;
           }
-          /* Pauses the scroll when the user hovers over the banner */
           .marquee-container:hover .animate-marquee {
             animation-play-state: paused;
           }
@@ -278,108 +278,94 @@
         
         <div class="relative w-full border-y border-white/5 bg-[#050505]/50 py-10 reveal">
           
-          <!-- Fade gradients for the left and right edges -->
+          <!-- Fade gradients for edges -->
           <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
           <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
           
           <!-- Marquee Container -->
           <div class="marquee-container flex overflow-hidden gap-8 w-full">
             
-            <!-- First Set of 6 Images -->
+            <!-- First Set -->
             <div class="flex shrink-0 gap-8 animate-marquee">
-              
-              <!-- Image 1 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="guitar.png" alt="Guitar System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Musicians & Bands</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Musicians &amp; Bands</span>
               </div>
 
-              <!-- Image 2 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="fire.png" alt="Fire System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Kindreds, Covens & Clubs</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Kindreds, Covens &amp; Clubs</span>
               </div>
 
-              <!-- Image 3 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="worktable.png" alt="Worktable System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Smalls Businesses</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Small Businesses</span>
               </div>
 
-              <!-- Image 4 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="events.png" alt="Events System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Events & Groups</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Events &amp; Groups</span>
               </div>
 
-              <!-- Image 5 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="scale.png" alt="Scale System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Brand Identity</span>
               </div>
 
-              <!-- Image 6 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="loom.jpg" alt="Loom Large" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Lead Generation</span>
               </div>
 
-               <!-- Image 7 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="Activists.png" alt="Flaming Fist" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Activism & Charity</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Activism &amp; Charity</span>
               </div>
-
             </div>
 
-            <!-- Second Set of 6 Images (Duplicate for Seamless Infinite Looping) -->
+            <!-- Second Set (Duplicate for Loop) -->
             <div class="flex shrink-0 gap-8 animate-marquee" aria-hidden="true">
-              <!-- Image 1 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="guitar.png" alt="Guitar System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Musicians & Bands</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Musicians &amp; Bands</span>
               </div>
 
-              <!-- Image 2 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="fire.png" alt="Fire System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Kindreds, Covens & Clubs</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Kindreds, Covens &amp; Clubs</span>
               </div>
 
-              <!-- Image 3 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="worktable.png" alt="Worktable System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Smalls Businesses</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Small Businesses</span>
               </div>
 
-              <!-- Image 4 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="events.png" alt="Events System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Events & Groups</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Events &amp; Groups</span>
               </div>
 
-              <!-- Image 5 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="scale.png" alt="Scale System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Brand Identity</span>
               </div>
 
-              <!-- Image 6 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="loom.jpg" alt="Loom Large" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Lead Generation</span>
               </div>
 
-               <!-- Image 7 -->
-              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] rounded-none flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
+              <div class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40">
                 <img src="Activists.png" alt="Flaming Fist" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
-                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Activism & Charity</span>
+                <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Activism &amp; Charity</span>
               </div>
-         
+            </div>
+
+          </div>
         </div>
       </section>
 
-      <!-- Brand Standards Detail -->
+      <!-- Brand Standards Detail Section -->
       <section class="bg-[#0a0a0a]/90 border border-primary/20 p-8 md:p-14 relative overflow-hidden shadow-2xl reveal">
         <div class="absolute -top-32 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
@@ -412,16 +398,15 @@
             </ul>
           </div>
           
-         <div class="flex-1 w-full">
-    <div class="aspect-[4/3] lg:aspect-video bg-black/90 border border-white/10 shadow-2xl relative overflow-hidden group">
-        <div class="absolute inset-0 bg-center bg-cover grayscale contrast-125 opacity-50 group-hover:opacity-80 transition-opacity duration-700" data-alt="Women weaving a web" style='background-image: url("WomenWeavingWebHero.jpg");'></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-    </div>
-         </div>
-              
-              <div class="absolute bottom-4 right-4 bg-primary border border-primary/50 px-4 py-2 display-occult text-[9px] text-white tracking-[0.3em] uppercase shadow-lg">
-                Weave The Pattern
-              </div>
+          <div class="flex-1 w-full relative">
+            <div class="aspect-[4/3] lg:aspect-video bg-black/90 border border-white/10 shadow-2xl relative overflow-hidden group">
+              <div class="absolute inset-0 bg-center bg-cover grayscale contrast-125 opacity-50 group-hover:opacity-80 transition-opacity duration-700" data-alt="Women weaving a web" style='background-image: url("WomenWeavingWebHero.jpg");'></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            </div>
+            
+            <!-- Floating Badge -->
+            <div class="absolute bottom-4 right-4 bg-primary border border-primary/50 px-4 py-2 display-occult text-[9px] text-white tracking-[0.3em] uppercase shadow-lg z-20">
+              Weave The Pattern
             </div>
           </div>
           
@@ -451,7 +436,6 @@
       </div>
     </div>
   </footer>
-
 
   <!-- Unified Scripts -->
   <script>
@@ -497,8 +481,6 @@
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: stop observing once revealed
-                // revealObserver.unobserve(entry.target); 
               }
             });
           }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
