@@ -9,41 +9,39 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..300,0..1&display=swap" rel="stylesheet"/>
 
   <style type="text/tailwindcss">
     :root {
-      --primary-red: #8b0000;
-      --blood-accent: #f00;
-      --silver-text: #c0c0c0;
-      --muted-grey: #4a4a4a;
-      --deep-black: #050505;
+      --primary-red: #7a0000; /* Kept the refined primary color for body accents */
+      --silver-text: #d4d4d8;
+      --deep-black: #080808;
       --thread-width: 1px
     }
 
     .orb-glow-crimson {
-      background: radial-gradient(circle, rgba(139, 0, 0, 0.5) 0%, rgba(50, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 70%);
-      filter: blur(40px)
+      background: radial-gradient(circle, rgba(100, 0, 0, 0.25) 0%, rgba(30, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 70%);
+      filter: blur(60px);
     }
 
     .text-silver { color: var(--silver-text) }
 
     .bg-weave {
       background-image:
-        linear-gradient(rgba(139, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(139, 0, 0, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px
+        linear-gradient(rgba(139, 0, 0, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139, 0, 0, 0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
     }
 
     .red-thread-vertical {
       width: var(--thread-width);
-      background: linear-gradient(to bottom, transparent, var(--primary-red), transparent)
+      background: linear-gradient(to bottom, transparent, rgba(122, 0, 0, 0.6), transparent);
     }
 
     .red-thread-horizontal {
       height: var(--thread-width);
-      background: linear-gradient(to right, transparent, var(--primary-red), transparent)
+      background: linear-gradient(to right, transparent, rgba(122, 0, 0, 0.6), transparent);
     }
 
     section { scroll-margin-top: 80px }
@@ -53,14 +51,15 @@
 
     .loom-texture {
       background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA-gHvmOaT0bgzoVjjDf447Uxlo_lKlAcP8yT6qHv0esIG-yDadIgB5S_YXHOLH7XNNW2DcDGxdOvzkd_cprIdTh_FV26Wmi9VXl5y9ix9rluglOZjNw05MtbLbhjJkiro2ObKr157Oj3kXuO49BThR8Zgm7hjhdIP8RgIUYWf1tllwSCibT0OwmyafSaTnIZSG5JMu5V2Rsj6RvXr_JgStEAqOoF-Vbkg0GTdqO9w8MlYO37yMZO4cGZO_QdUp2hCDDF4GGYllCMo);
-      opacity: 0.05
+      opacity: 0.03;
+      mix-blend-mode: overlay;
     }
 
     /* Subtle scroll reveal */
     .reveal {
       opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 650ms ease, transform 650ms ease;
+      transform: translateY(24px);
+      transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
     .reveal.active {
@@ -70,22 +69,17 @@
 
     /* Auto-activate service cards on mobile/in-view */
     .auto-activate {
-      transition:
-        background-color 700ms ease,
-        border-color 700ms ease,
-        box-shadow 700ms ease,
-        transform 700ms ease,
-        opacity 700ms ease;
+      transition: all 700ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .auto-activate.in-view {
-      background-color: rgba(28, 25, 23, 0.4);
+      background-color: rgba(28, 25, 23, 0.2);
     }
 
     .auto-activate .hover-line {
       transform: scaleX(0);
-      transition: transform 700ms ease;
-      transform-origin: center;
+      transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: left;
     }
 
     .auto-activate:hover .hover-line,
@@ -94,12 +88,12 @@
     }
 
     .auto-activate .hover-title {
-      transition: color 300ms ease;
+      transition: color 400ms ease;
     }
 
     .auto-activate:hover .hover-title,
     .auto-activate.in-view .hover-title {
-      color: rgb(245 245 244);
+      color: rgb(250 250 249);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -123,6 +117,7 @@
       theme: {
         extend: {
           colors: {
+            /* Restored your original primary and accent colors specifically for the nav/footer to remain congruent */
             primary: "#8b0000",
             accent: "#ff0000",
             silver: "#c0c0c0",
@@ -139,12 +134,13 @@
   </script>
 </head>
 
-<body class="bg-background-dark text-silver font-sans selection:bg-primary/50 overflow-x-hidden bg-weave relative">
+<body class="bg-background-dark text-silver font-sans selection:bg-primary/30 selection:text-white overflow-x-hidden bg-weave relative antialiased">
   <div class="fixed inset-0 pointer-events-none z-0">
-    <div class="absolute left-1/4 h-full red-thread-vertical opacity-20"></div>
-    <div class="absolute right-1/4 h-full red-thread-vertical opacity-20"></div>
+    <div class="absolute left-1/4 h-full red-thread-vertical opacity-10"></div>
+    <div class="absolute right-1/4 h-full red-thread-vertical opacity-10"></div>
   </div>
 
+  <!-- RESTORED EXACT ORIGINAL NAV -->
   <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center space-x-3 group">
@@ -187,47 +183,45 @@
 <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
     <!-- Background textures -->
     <div class="absolute inset-0 loom-texture"></div>
-    <div class="absolute top-1/3 left-0 w-full red-thread-horizontal opacity-20"></div>
-    <div class="absolute bottom-1/3 left-0 w-full red-thread-horizontal opacity-20"></div>
+    <div class="absolute top-1/3 left-0 w-full red-thread-horizontal opacity-10"></div>
+    <div class="absolute bottom-1/3 left-0 w-full red-thread-horizontal opacity-10"></div>
 
-    <!-- UPDATED: Changed max-w-7xl to max-w-[100rem] and adjusted padding -->
-    <div class="relative z-10 w-full max-w-[100rem] mx-auto px-6 lg:px-12 xl:px-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center reveal">
+    <div class="relative z-10 w-full max-w-[100rem] mx-auto px-6 lg:px-12 xl:px-16 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center reveal">
       
-      <!-- Left Column: Typography (Takes 4 columns on huge screens to leave 8 for the image) -->
+      <!-- Left Column: Typography -->
       <div class="text-center lg:text-left order-2 lg:order-1 lg:col-span-5 xl:col-span-4 z-20">
-        <h2 class="display-occult text-xs md:text-sm tracking-[0.6em] uppercase text-primary mb-8">Masters of Esoteric Craft</h2>
-        <h1 class="serif-sharp text-5xl md:text-7xl xl:text-8xl text-white leading-[0.9] mb-8 font-light">
+        <h2 class="display-occult text-[10px] md:text-xs tracking-[0.5em] uppercase text-primary/80 mb-8">Masters of Esoteric Craft</h2>
+        <h1 class="serif-sharp text-5xl md:text-7xl xl:text-8xl text-white/95 leading-[0.85] mb-8 font-light">
           The unseen, woven and bound<br/>
-          <span class="italic text-silver opacity-80">with precision.</span>
+          <span class="italic text-stone-400">with precision.</span>
         </h1>
 
-        <p class="max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-stone-300 italic tracking-[0.06em] leading-[1.75] mb-12"
+        <p class="max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-stone-400 italic tracking-wide leading-[1.8] mb-12"
            style="font-family:'Playfair Display', serif;">
           We are the strategists of the invisible. 
-          <span class="text-white font-semibold not-italic">The Red Thread</span> 
+          <span class="text-white/90 font-medium not-italic">The Red Thread</span> 
           weaves the narratives of the unseen, connecting your vision to the collective unconscious through master-level craftsmanship.
         </p>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-          <a class="group relative px-10 py-4 bg-primary text-white display-occult tracking-widest text-xs overflow-hidden transition-all duration-500 border border-primary hover:bg-transparent" href="services.html">
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
+          <a class="group relative px-10 py-4 bg-primary/90 text-white display-occult tracking-widest text-xs overflow-hidden transition-all duration-500 hover:bg-primary" href="services.html">
             <span class="relative z-10">THE LOOM</span>
           </a>
-           <a class="px-10 py-4 border border-white/10 text-stone-400 display-occult tracking-widest text-xs hover:border-primary hover:text-white transition-all bg-white/5" href="targeting.html">
+           <a class="px-10 py-4 border border-white/10 text-stone-300 display-occult tracking-widest text-xs hover:border-white/30 hover:text-white transition-all bg-white/[0.02]" href="targeting.html">
             YOUR SAGA
-          </a>
           </a>
         </div>
       </div>
 
-      <!-- Right Column: The Hero Image (Takes 8 columns out of 12 on huge screens) -->
+      <!-- Right Column: The Hero Image -->
       <div class="relative flex justify-center items-center order-1 lg:order-2 w-full lg:col-span-7 xl:col-span-8">
-        <!-- Deep red glow behind the image -->
-        <div class="absolute inset-0 orb-glow-crimson opacity-60 scale-[1.3] blur-3xl"></div>
+        <!-- Ambient glow behind the image -->
+        <div class="absolute inset-0 orb-glow-crimson opacity-80 scale-125"></div>
         
         <!-- The Image -->
         <img
           alt="Women weaving a web - The Red Thread Consulting"
-          class="relative z-10 w-full h-auto object-contain rounded-sm border border-primary/30 shadow-[0_0_50px_rgba(139,0,0,0.25)]"
+          class="relative z-10 w-full h-auto object-contain rounded-sm border border-white/5 ring-1 ring-white/10 shadow-2xl bg-black/20"
           src="WomenWeavingWebHero.jpg"
         />
       </div>
@@ -235,107 +229,107 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-30 flex flex-col items-center">
-      <div class="w-px h-16 bg-gradient-to-b from-transparent via-primary to-transparent mb-4"></div>
-      <span class="material-symbols-outlined text-white text-2xl font-thin">expand_more</span>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40 flex flex-col items-center">
+      <div class="w-px h-16 bg-gradient-to-b from-transparent via-stone-500 to-transparent mb-4"></div>
+      <span class="material-symbols-outlined text-stone-400 text-xl font-extralight">expand_more</span>
     </div>
   </header>
 
   <section class="py-32 md:py-48 relative overflow-hidden reveal" id="services">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary via-primary/20 to-transparent opacity-30"></div>
-    <div class="max-w-7xl mx-auto px-6 relative">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary/30 via-primary/5 to-transparent opacity-40"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
         <div class="max-w-3xl">
-          <h3 class="display-occult text-primary tracking-[0.4em] uppercase text-xs mb-6">Technique &amp; Tradition</h3>
-          <h2 class="serif-sharp text-4xl md:text-7xl text-white leading-tight font-light">Weaving the Narrative.</h2>
+          <h3 class="display-occult text-primary/80 tracking-[0.4em] uppercase text-xs mb-6">Technique &amp; Tradition</h3>
+          <h2 class="serif-sharp text-5xl md:text-7xl text-white/95 leading-[0.9] font-light">Weaving the Narrative.</h2>
         </div>
-        <div class="md:pt-4 border-l border-primary/20 pl-8">
-          <p class="text-stone-500 max-w-xs font-light leading-relaxed italic">"Every brand is a tapestry of hidden symbols, waiting for the master's hand."</p>
+        <div class="md:pt-6 border-l border-white/10 pl-8">
+          <p class="text-stone-400 max-w-xs font-light leading-relaxed italic text-lg">"Every brand is a tapestry of hidden symbols, waiting for the master's hand."</p>
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-px bg-primary/20 border border-primary/20">
-        <div class="group auto-activate relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
-          <div class="hover-line absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-          <span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">join_inner</span>
-          <h4 class="hover-title serif-sharp text-3xl text-white mb-6 font-light">Ritualistic Design</h4>
-          <p class="text-stone-500 font-light mb-8 leading-relaxed">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
+          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light">join_inner</span>
+          <h4 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Ritualistic Design</h4>
+          <p class="text-stone-400 font-light mb-10 leading-relaxed text-sm">
             Creatives constructed with the precision of a loom. We develop icons that function as sigils, binding vision to form in the weaver's tradition.
           </p>
-          <ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-300">
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SYMBOLIC LOGOS</li>
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SUB-CULTURAL DESIGNS</li>
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>THREAD-CRAFTED ILLUSTRATIONS</li>
+          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400">
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>SYMBOLIC LOGOS</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>SUB-CULTURAL DESIGNS</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>THREAD-CRAFTED ILLUSTRATIONS</li>
           </ul>
         </div>
 
-        <div class="group auto-activate relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
-          <div class="hover-line absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-          <span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">hub</span>
-          <h4 class="hover-title serif-sharp text-3xl text-white mb-6 font-light">Digital Weaving</h4>
-          <p class="text-stone-300 font-light mb-8 leading-relaxed">
+        <div class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
+          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light">hub</span>
+          <h4 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Digital Weaving</h4>
+          <p class="text-stone-400 font-light mb-10 leading-relaxed text-sm">
             Website designs built with interwoven code. We balance goal-oriented performance with immersive aesthetics to ensure your digital footprint is indelible.
           </p>
-          <ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-300">
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>DARK-UI OPTIMIZATIONS</li>
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>MOBILE-FIRST DESIGN</li>
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>PERSONALIZED AI-BOT INTEGRATIONS</li>
+          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400">
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>DARK-UI OPTIMIZATIONS</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>MOBILE-FIRST DESIGN</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>PERSONALIZED AI-BOT INTEGRATIONS</li>
           </ul>
         </div>
 
-        <div class="group auto-activate relative p-12 bg-background-dark hover:bg-stone-900/40 transition-all duration-700">
-          <div class="hover-line absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-          <span class="material-symbols-outlined text-primary text-5xl mb-10 font-thin">linear_scale</span>
-          <h4 class="hover-title serif-sharp text-3xl text-white mb-6 font-light">Narrative Strategy</h4>
-          <p class="text-stone-300 font-light mb-8 leading-relaxed">
+        <div class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
+          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light">linear_scale</span>
+          <h4 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Narrative Strategy</h4>
+          <p class="text-stone-400 font-light mb-10 leading-relaxed text-sm">
             Following the thread to the source. We navigate the alternative market, ensuring your business bypasses the noise to reach the intended audience.
           </p>
-          <ul class="space-y-4 text-[10px] display-occult tracking-[0.2em] text-stone-300">
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>AD CAMPAIGN MANAGEMENT</li>
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>SEO UPDATES</li>
-            <li class="flex items-center"><span class="w-8 h-px bg-primary/40 mr-4"></span>PAID MEDIA STRATEGY</li>
+          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400">
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>AD CAMPAIGN MANAGEMENT</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>SEO UPDATES</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>PAID MEDIA STRATEGY</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-40 relative overflow-hidden bg-black reveal">
-    <div class="absolute inset-0 orb-glow-crimson opacity-20"></div>
-    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-20"></div>
-    <div class="absolute bottom-0 left-0 w-full red-thread-horizontal opacity-20"></div>
+  <section class="py-40 relative overflow-hidden bg-black/50 reveal">
+    <div class="absolute inset-0 orb-glow-crimson opacity-30"></div>
+    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10"></div>
+    <div class="absolute bottom-0 left-0 w-full red-thread-horizontal opacity-10"></div>
 
-    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-      <h2 class="serif-sharp text-4xl md:text-6xl italic leading-tight text-white font-light mb-16">
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="serif-sharp text-4xl md:text-5xl lg:text-6xl italic leading-[1.2] text-stone-200 font-light mb-12">
         "The thread of destiny is not merely followed; it is spun, woven, and dyed by those who know the secret paths."
       </h2>
 
-      <div class="flex items-center justify-center space-x-4 mb-10">
-        <div class="h-px w-24 bg-gradient-to-r from-transparent to-primary"></div>
-        <span class="material-symbols-outlined text-primary text-xl">gesture</span>
-        <div class="h-px w-24 bg-gradient-to-l from-transparent to-primary"></div>
+      <div class="flex items-center justify-center space-x-6 mb-10">
+        <div class="h-px w-16 bg-gradient-to-r from-transparent to-white/20"></div>
+        <span class="material-symbols-outlined text-stone-500 text-lg font-light">gesture</span>
+        <div class="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
       </div>
 
-      <p class="display-occult text-[10px] tracking-[0.5em] uppercase text-stone-300">The Axiom of The Red Thread</p>
+      <p class="display-occult text-[10px] tracking-[0.4em] uppercase text-stone-500">The Axiom of The Red Thread</p>
     </div>
   </section>
 
   <section class="py-32 md:py-48 bg-background-dark relative reveal" id="contact">
-    <div class="absolute top-0 left-10 h-full red-thread-vertical opacity-10"></div>
-    <div class="absolute top-0 right-10 h-full red-thread-vertical opacity-10"></div>
+    <div class="absolute top-0 left-10 h-full red-thread-vertical opacity-5"></div>
+    <div class="absolute top-0 right-10 h-full red-thread-vertical opacity-5"></div>
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-start relative z-10">
-      <div class="sticky top-32">
-        <h3 class="display-occult text-[#c43a3a] font-semibold tracking-[0.4em] uppercase text-xs mb-8">The Loom's Entry</h3>
-        <h2 class="serif-sharp text-5xl md:text-8xl text-white leading-tight mb-10 font-light italic">Carefully Woven Results.</h2>
-        <p class="text-xl text-stone-400 font-light mb-16 leading-relaxed max-w-lg">
+      <div class="sticky top-40">
+        <h3 class="display-occult text-stone-500 font-medium tracking-[0.4em] uppercase text-xs mb-8">The Loom's Entry</h3>
+        <h2 class="serif-sharp text-5xl md:text-7xl lg:text-8xl text-white/95 leading-[0.9] mb-10 font-light">Carefully Woven Results.</h2>
+        <p class="text-lg md:text-xl text-stone-400 font-light mb-16 leading-relaxed max-w-md">
           Our loom is exclusive. If your vision requires the steady hand of a master weaver, pull the thread.
         </p>
       </div>
 
       <div class="relative w-full max-w-xl mx-auto md:max-w-none">
-        <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-primary opacity-50"></div>
-        <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-primary opacity-50"></div>
+        <div class="absolute -top-3 -left-3 w-8 h-8 border-t border-l border-white/20"></div>
+        <div class="absolute -bottom-3 -right-3 w-8 h-8 border-b border-r border-white/20"></div>
 
         <form
         name="contact"
@@ -343,7 +337,7 @@
         action="/"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        class="space-y-12 p-7 md:p-12 bg-stone-900/30 border border-primary/10 backdrop-blur-md"
+        class="space-y-12 p-8 md:p-14 bg-stone-900/20 border border-white/5 backdrop-blur-md rounded-sm"
         >
           <input type="hidden" name="form-name" value="contact">
           <input type="hidden" name="_redirect" value="thanks.html">
@@ -353,47 +347,48 @@
           </p>
 
           <div>
-            <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-[#d4af37]">Name</label>
+            <label class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">Name</label>
             <input
               name="name"
               type="text"
               required
-              class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-[#d4af37]"
+              class="w-full bg-transparent border-b border-white/10 focus:border-white/40 focus:ring-0 transition-colors py-3 px-0 serif-sharp text-xl md:text-2xl text-white outline-none placeholder:text-stone-600 font-light"
               placeholder="Name or Business"
             />
           </div>
 
           <div>
-            <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-[#d4af37]">Email</label>
+            <label class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">Email</label>
             <input
               name="email"
               type="email"
               required
-              class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-[#d4af37]"
+              class="w-full bg-transparent border-b border-white/10 focus:border-white/40 focus:ring-0 transition-colors py-3 px-0 serif-sharp text-xl md:text-2xl text-white outline-none placeholder:text-stone-600 font-light"
               placeholder="your@email.com"
             />
           </div>
 
           <div>
-            <label class="block display-occult text-[10px] tracking-widest uppercase mb-5 text-[#d4af37]">The Request</label>
+            <label class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">The Request</label>
             <textarea
               name="message"
               required
-              rows="5"
-              class="w-full bg-transparent border-b border-white/10 focus:border-primary focus:ring-0 transition-colors py-4 px-0 serif-sharp text-xl text-white outline-none placeholder:text-[#d4af37]"
+              rows="4"
+              class="w-full bg-transparent border-b border-white/10 focus:border-white/40 focus:ring-0 transition-colors py-3 px-0 serif-sharp text-xl md:text-2xl text-white outline-none placeholder:text-stone-600 font-light resize-none"
               placeholder="Describe the pattern you wish to weave..."
             ></textarea>
           </div>
 
-          <button class="group relative w-full py-6 bg-primary text-white display-occult tracking-[0.4em] uppercase text-xs overflow-hidden" type="submit">
-            <span class="relative z-10">BEGIN THE WEAVE</span>
-            <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+          <button class="group relative w-full py-5 bg-white/5 text-stone-200 border border-white/10 display-occult tracking-[0.4em] uppercase text-xs overflow-hidden hover:border-white/30 transition-colors duration-500" type="submit">
+            <span class="relative z-10 transition-colors duration-500 group-hover:text-white">BEGIN THE WEAVE</span>
+            <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
           </button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- RESTORED EXACT ORIGINAL FOOTER -->
   <footer class="py-20 border-t border-primary/20 bg-background-dark relative">
     <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10"></div>
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
