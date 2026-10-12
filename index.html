@@ -217,8 +217,9 @@
       },
     };
   </script>
+  
   <!-- Netlify Identity Widget -->
-<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body class="bg-background-dark text-silver font-sans selection:bg-primary/30 selection:text-white overflow-x-hidden bg-weave relative antialiased">
@@ -583,21 +584,22 @@
       }
     });
   </script>
+  
+  <!-- Netlify Identity Redirection Logic -->
   <script>
-  if (window.netlifyIdentity) {
-    // When the page loads, check if they are logging in or accepting an invite
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        // If they successfully log in or set their password from an invite link, redirect them to the portal!
+    window.addEventListener('load', function() {
+      if (window.netlifyIdentity) {
+        // 1. Force the box to open if they clicked an invite or reset link
+        if (window.location.hash.includes("invite_token") || window.location.hash.includes("recovery_token")) {
+          window.netlifyIdentity.open();
+        }
+
+        // 2. The second they successfully log in or set a password, teleport them to the portal
         window.netlifyIdentity.on("login", () => {
           document.location.href = "/portal.html";
         });
-      } else {
-        // If they somehow land on the homepage and are ALREADY logged in, optionally redirect them to the portal
-        // document.location.href = "/portal.html"; 
       }
     });
-  }
-</script>
+  </script>
 </body>
 </html>
