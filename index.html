@@ -3,7 +3,27 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>The Red Thread | Weaving the Unseen</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>The Red Thread | Alternative Brand Strategy &amp; Subculture Design</title>
+  <meta name="description" content="The Red Thread is a specialized design agency for alternative brands, subculture aesthetics, dark UI design, and societal typography."/>
+  <meta name="keywords" content="alternative branding agency, subculture design, dark ui design, esoteric visual identity, societal typography, narrative strategy, custom logo design"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://theredthreadconsulting.com/"/>
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://theredthreadconsulting.com/"/>
+  <meta property="og:title" content="The Red Thread | Alternative Brand Strategy &amp; Subculture Design"/>
+  <meta property="og:description" content="Weaving the narratives of the unseen. Specialized graphic design, dark UI web development, and branding for alternative markets."/>
+  <meta property="og:image" content="https://theredthreadconsulting.com/WomenWeavingWebHero.jpg"/>
+  <meta property="og:site_name" content="The Red Thread Consulting"/>
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="The Red Thread | Alternative Brand Strategy &amp; Subculture Design"/>
+  <meta name="twitter:description" content="Weaving the narratives of the unseen. Specialized graphic design, dark UI web development, and branding for alternative markets."/>
+  <meta name="twitter:image" content="https://theredthreadconsulting.com/WomenWeavingWebHero.jpg"/>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
 
@@ -12,9 +32,75 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..300,0..1&display=swap" rel="stylesheet"/>
 
+  <!-- JSON-LD Structured Data for AIO & Entity Recognition -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://theredthreadconsulting.com/#organization",
+        "name": "The Red Thread Consulting",
+        "url": "https://theredthreadconsulting.com/",
+        "logo": "https://theredthreadconsulting.com/WomenWeavingWebHero.jpg",
+        "image": "https://theredthreadconsulting.com/WomenWeavingWebHero.jpg",
+        "description": "Bespoke branding, societal typography, subculture design, and dark UI development agency for alternative and non-traditional brands.",
+        "priceRange": "$$$",
+        "knowsAbout": [
+          "Alternative Branding Strategy",
+          "Societal & Esoteric Typography",
+          "Subculture Design Aesthetics",
+          "Dark UI & Custom Web Development",
+          "Symbolic Logo Design",
+          "Niche Paid Media Strategy"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Creative & Branding Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ritualistic Design",
+                "description": "Symbolic logos, sub-cultural design, and thread-crafted illustrations tailored for alternative brand identities."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Weaving",
+                "description": "Web design with custom dark-UI optimization, mobile-first responsive design, and tailored interactive integrations."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Narrative Strategy",
+                "description": "Alternative market positioning, ad campaign management, SEO updates, and paid media execution."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://theredthreadconsulting.com/#website",
+        "url": "https://theredthreadconsulting.com/",
+        "name": "The Red Thread",
+        "publisher": {
+          "@id": "https://theredthreadconsulting.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
   <style type="text/tailwindcss">
     :root {
-      --primary-red: #7a0000; /* Kept the refined primary color for body accents */
+      --primary-red: #7a0000;
       --silver-text: #d4d4d8;
       --deep-black: #080808;
       --thread-width: 1px
@@ -117,7 +203,6 @@
       theme: {
         extend: {
           colors: {
-            /* Restored your original primary and accent colors specifically for the nav/footer to remain congruent */
             primary: "#8b0000",
             accent: "#ff0000",
             silver: "#c0c0c0",
@@ -135,23 +220,28 @@
 </head>
 
 <body class="bg-background-dark text-silver font-sans selection:bg-primary/30 selection:text-white overflow-x-hidden bg-weave relative antialiased">
-  <div class="fixed inset-0 pointer-events-none z-0">
+  <!-- Machine-Readable Brand Identity Context for Web Crawlers & LLMs -->
+  <div class="sr-only">
+    <h2>The Red Thread Consulting | Alternative Brand Strategy &amp; Visual Identity Agency</h2>
+    <p>We specialize in subculture graphic design, dark-UI website development, esoteric typography, ad campaign management, and strategic positioning for non-traditional businesses.</p>
+  </div>
+
+  <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
     <div class="absolute left-1/4 h-full red-thread-vertical opacity-10"></div>
     <div class="absolute right-1/4 h-full red-thread-vertical opacity-10"></div>
   </div>
 
-  <!-- RESTORED EXACT ORIGINAL NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20">
+  <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20" aria-label="Main Navigation">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="flex items-center space-x-3 group">
-        <span class="material-symbols-outlined text-primary text-3xl font-light">gesture</span>
+      <a href="index.html" class="flex items-center space-x-3 group" aria-label="The Red Thread Home">
+        <span class="material-symbols-outlined text-primary text-3xl font-light" aria-hidden="true">gesture</span>
         <span class="display-occult text-xl tracking-[0.3em] text-white">THE RED THREAD</span>
-      </div>
+      </a>
 
       <div class="hidden md:flex items-center space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase">
-        <a class="hover:text-primary transition-colors text-stone-400" href="services.html">The Loom</a>
-        <a class="hover:text-primary transition-colors text-stone-400" href="targeting.html">Your Saga</a>
-        <a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="index.html#contact">Contact the Oracle</a>
+        <a class="hover:text-primary transition-colors text-stone-400" href="services.html" aria-label="Design Services &amp; Portfolio (The Loom)">The Loom</a>
+        <a class="hover:text-primary transition-colors text-stone-400" href="targeting.html" aria-label="Audience Targeting &amp; Strategy (Your Saga)">Your Saga</a>
+        <a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="index.html#contact" aria-label="Contact Us (Contact the Oracle)">Contact the Oracle</a>
       </div>
 
       <div class="md:hidden relative">
@@ -161,9 +251,9 @@
           class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-primary hover:bg-white/5 transition"
           aria-controls="mobileMenu"
           aria-expanded="false"
-          aria-label="Open menu"
+          aria-label="Open main menu"
         >
-          <span class="material-symbols-outlined text-3xl">menu</span>
+          <span class="material-symbols-outlined text-3xl" aria-hidden="true">menu</span>
         </button>
 
         <div
@@ -171,9 +261,9 @@
           class="hidden absolute right-0 mt-3 w-64 z-50 rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
         >
           <div class="flex flex-col p-3 display-occult text-[10px] tracking-[0.3em] uppercase">
-            <a class="px-3 py-3 text-stone-400 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html">The Loom</a>
-            <a class="px-3 py-3 text-stone-400 hover:text-primary hover:bg-white/5 transition rounded-lg" href="targeting.html">Your Saga</a>
-            <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="index.html#contact">Contact the Oracle</a>
+            <a class="px-3 py-3 text-stone-400 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html" aria-label="Design Services &amp; Portfolio (The Loom)">The Loom</a>
+            <a class="px-3 py-3 text-stone-400 hover:text-primary hover:bg-white/5 transition rounded-lg" href="targeting.html" aria-label="Audience Targeting &amp; Strategy (Your Saga)">Your Saga</a>
+            <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="index.html#contact" aria-label="Contact Us (Contact the Oracle)">Contact the Oracle</a>
           </div>
         </div>
       </div>
@@ -181,16 +271,15 @@
   </nav>
 
 <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
-    <!-- Background textures -->
-    <div class="absolute inset-0 loom-texture"></div>
-    <div class="absolute top-1/3 left-0 w-full red-thread-horizontal opacity-10"></div>
-    <div class="absolute bottom-1/3 left-0 w-full red-thread-horizontal opacity-10"></div>
+    <div class="absolute inset-0 loom-texture" aria-hidden="true"></div>
+    <div class="absolute top-1/3 left-0 w-full red-thread-horizontal opacity-10" aria-hidden="true"></div>
+    <div class="absolute bottom-1/3 left-0 w-full red-thread-horizontal opacity-10" aria-hidden="true"></div>
 
     <div class="relative z-10 w-full max-w-[100rem] mx-auto px-6 lg:px-12 xl:px-16 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center reveal">
       
-      <!-- Left Column: Typography -->
+      <!-- Left Column: Primary Heading & Intro -->
       <div class="text-center lg:text-left order-2 lg:order-1 lg:col-span-5 xl:col-span-4 z-20">
-        <h2 class="display-occult text-[10px] md:text-xs tracking-[0.5em] uppercase text-primary/80 mb-8">Masters of Esoteric Craft</h2>
+        <p class="display-occult text-[10px] md:text-xs tracking-[0.5em] uppercase text-primary/80 mb-8">Masters of Esoteric Craft</p>
         <h1 class="serif-sharp text-5xl md:text-7xl xl:text-8xl text-white/95 leading-[0.85] mb-8 font-light">
           The unseen, woven and bound<br/>
           <span class="italic text-stone-400">with precision.</span>
@@ -204,107 +293,112 @@
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
-          <a class="group relative px-10 py-4 bg-primary/90 text-white display-occult tracking-widest text-xs overflow-hidden transition-all duration-500 hover:bg-primary" href="services.html">
+          <a class="group relative px-10 py-4 bg-primary/90 text-white display-occult tracking-widest text-xs overflow-hidden transition-all duration-500 hover:bg-primary" href="services.html" aria-label="View Design Services (The Loom)">
             <span class="relative z-10">THE LOOM</span>
           </a>
-           <a class="px-10 py-4 border border-white/10 text-stone-300 display-occult tracking-widest text-xs hover:border-white/30 hover:text-white transition-all bg-white/[0.02]" href="targeting.html">
+           <a class="px-10 py-4 border border-white/10 text-stone-300 display-occult tracking-widest text-xs hover:border-white/30 hover:text-white transition-all bg-white/[0.02]" href="targeting.html" aria-label="Explore Target Audience Strategies (Your Saga)">
             YOUR SAGA
           </a>
         </div>
       </div>
 
-      <!-- Right Column: The Hero Image -->
+      <!-- Right Column: Hero Artwork -->
       <div class="relative flex justify-center items-center order-1 lg:order-2 w-full lg:col-span-7 xl:col-span-8">
-        <!-- Ambient glow behind the image -->
-        <div class="absolute inset-0 orb-glow-crimson opacity-80 scale-125"></div>
+        <div class="absolute inset-0 orb-glow-crimson opacity-80 scale-125" aria-hidden="true"></div>
         
-        <!-- The Image -->
         <img
-          alt="Women weaving a web - The Red Thread Consulting"
+          alt="Illustration of women weaving a cosmic web - The Red Thread Alt Branding Agency"
+          title="The Red Thread - Masters of Esoteric Craft"
           class="relative z-10 w-full h-auto object-contain rounded-sm border border-white/5 ring-1 ring-white/10 shadow-2xl bg-black/20"
           src="WomenWeavingWebHero.jpg"
+          width="1200"
+          height="800"
+          loading="eager"
         />
       </div>
 
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40 flex flex-col items-center">
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40 flex flex-col items-center" aria-hidden="true">
       <div class="w-px h-16 bg-gradient-to-b from-transparent via-stone-500 to-transparent mb-4"></div>
       <span class="material-symbols-outlined text-stone-400 text-xl font-extralight">expand_more</span>
     </div>
   </header>
 
-  <section class="py-32 md:py-48 relative overflow-hidden reveal" id="services">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary/30 via-primary/5 to-transparent opacity-40"></div>
+  <section class="py-32 md:py-48 relative overflow-hidden reveal" id="services" aria-labelledby="services-heading">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-primary/30 via-primary/5 to-transparent opacity-40" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
         <div class="max-w-3xl">
-          <h3 class="display-occult text-primary/80 tracking-[0.4em] uppercase text-xs mb-6">Technique &amp; Tradition</h3>
-          <h2 class="serif-sharp text-5xl md:text-7xl text-white/95 leading-[0.9] font-light">Weaving the Narrative.</h2>
+          <p class="display-occult text-primary/80 tracking-[0.4em] uppercase text-xs mb-6">Technique &amp; Tradition</p>
+          <h2 id="services-heading" class="serif-sharp text-5xl md:text-7xl text-white/95 leading-[0.9] font-light">Weaving the Narrative.</h2>
         </div>
         <div class="md:pt-6 border-l border-white/10 pl-8">
-          <p class="text-stone-400 max-w-xs font-light leading-relaxed italic text-lg">"Every brand is a tapestry of hidden symbols, waiting for the master's hand."</p>
+          <blockquote class="text-stone-400 max-w-xs font-light leading-relaxed italic text-lg">"Every brand is a tapestry of hidden symbols, waiting for the master's hand."</blockquote>
         </div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
-          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light">join_inner</span>
-          <h4 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Ritualistic Design</h4>
+        <!-- Service 1 -->
+        <article class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
+          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" aria-hidden="true"></div>
+          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light" aria-hidden="true">join_inner</span>
+          <h3 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Ritualistic Design</h3>
           <p class="text-stone-400 font-light mb-10 leading-relaxed text-sm">
             Creatives constructed with the precision of a loom. We develop icons that function as sigils, binding vision to form in the weaver's tradition.
           </p>
-          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400">
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>SYMBOLIC LOGOS</li>
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>SUB-CULTURAL DESIGNS</li>
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>THREAD-CRAFTED ILLUSTRATIONS</li>
+          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400" aria-label="Ritualistic Design Capabilities">
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>SYMBOLIC LOGOS</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>SUB-CULTURAL DESIGNS</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>THREAD-CRAFTED ILLUSTRATIONS</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
-          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light">hub</span>
-          <h4 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Digital Weaving</h4>
+        <!-- Service 2 -->
+        <article class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
+          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" aria-hidden="true"></div>
+          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light" aria-hidden="true">hub</span>
+          <h3 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Digital Weaving</h3>
           <p class="text-stone-400 font-light mb-10 leading-relaxed text-sm">
             Website designs built with interwoven code. We balance goal-oriented performance with immersive aesthetics to ensure your digital footprint is indelible.
           </p>
-          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400">
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>DARK-UI OPTIMIZATIONS</li>
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>MOBILE-FIRST DESIGN</li>
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>PERSONALIZED AI-BOT INTEGRATIONS</li>
+          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400" aria-label="Digital Weaving Capabilities">
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>DARK-UI OPTIMIZATIONS</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>MOBILE-FIRST DESIGN</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>PERSONALIZED AI-BOT INTEGRATIONS</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
-          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light">linear_scale</span>
-          <h4 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Narrative Strategy</h4>
+        <!-- Service 3 -->
+        <article class="group auto-activate relative p-12 bg-stone-900/20 border border-white/5 rounded-sm backdrop-blur-sm hover:bg-stone-900/40 transition-all duration-700">
+          <div class="hover-line absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" aria-hidden="true"></div>
+          <span class="material-symbols-outlined text-stone-500 group-hover:text-primary/70 transition-colors duration-500 text-4xl mb-10 font-light" aria-hidden="true">linear_scale</span>
+          <h3 class="hover-title serif-sharp text-3xl text-stone-300 mb-6 font-light">Narrative Strategy</h3>
           <p class="text-stone-400 font-light mb-10 leading-relaxed text-sm">
             Following the thread to the source. We navigate the alternative market, ensuring your business bypasses the noise to reach the intended audience.
           </p>
-          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400">
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>AD CAMPAIGN MANAGEMENT</li>
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>SEO UPDATES</li>
-            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors"></span>PAID MEDIA STRATEGY</li>
+          <ul class="space-y-5 text-[9px] display-occult tracking-[0.2em] text-stone-400" aria-label="Narrative Strategy Capabilities">
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>AD CAMPAIGN MANAGEMENT</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>SEO UPDATES</li>
+            <li class="flex items-center"><span class="w-6 h-px bg-white/10 mr-4 group-hover:bg-primary/40 transition-colors" aria-hidden="true"></span>PAID MEDIA STRATEGY</li>
           </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="py-40 relative overflow-hidden bg-black/50 reveal">
-    <div class="absolute inset-0 orb-glow-crimson opacity-30"></div>
-    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10"></div>
-    <div class="absolute bottom-0 left-0 w-full red-thread-horizontal opacity-10"></div>
+  <section class="py-40 relative overflow-hidden bg-black/50 reveal" aria-label="Agency Philosophy">
+    <div class="absolute inset-0 orb-glow-crimson opacity-30" aria-hidden="true"></div>
+    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-full red-thread-horizontal opacity-10" aria-hidden="true"></div>
 
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-      <h2 class="serif-sharp text-4xl md:text-5xl lg:text-6xl italic leading-[1.2] text-stone-200 font-light mb-12">
+      <blockquote class="serif-sharp text-4xl md:text-5xl lg:text-6xl italic leading-[1.2] text-stone-200 font-light mb-12">
         "The thread of destiny is not merely followed; it is spun, woven, and dyed by those who know the secret paths."
-      </h2>
+      </blockquote>
 
-      <div class="flex items-center justify-center space-x-6 mb-10">
+      <div class="flex items-center justify-center space-x-6 mb-10" aria-hidden="true">
         <div class="h-px w-16 bg-gradient-to-r from-transparent to-white/20"></div>
         <span class="material-symbols-outlined text-stone-500 text-lg font-light">gesture</span>
         <div class="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
@@ -314,22 +408,22 @@
     </div>
   </section>
 
-  <section class="py-32 md:py-48 bg-background-dark relative reveal" id="contact">
-    <div class="absolute top-0 left-10 h-full red-thread-vertical opacity-5"></div>
-    <div class="absolute top-0 right-10 h-full red-thread-vertical opacity-5"></div>
+  <section class="py-32 md:py-48 bg-background-dark relative reveal" id="contact" aria-labelledby="contact-heading">
+    <div class="absolute top-0 left-10 h-full red-thread-vertical opacity-5" aria-hidden="true"></div>
+    <div class="absolute top-0 right-10 h-full red-thread-vertical opacity-5" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-start relative z-10">
       <div class="sticky top-40">
-        <h3 class="display-occult text-stone-500 font-medium tracking-[0.4em] uppercase text-xs mb-8">The Loom's Entry</h3>
-        <h2 class="serif-sharp text-5xl md:text-7xl lg:text-8xl text-white/95 leading-[0.9] mb-10 font-light">Carefully Woven Results.</h2>
+        <p class="display-occult text-stone-500 font-medium tracking-[0.4em] uppercase text-xs mb-8">The Loom's Entry</p>
+        <h2 id="contact-heading" class="serif-sharp text-5xl md:text-7xl lg:text-8xl text-white/95 leading-[0.9] mb-10 font-light">Carefully Woven Results.</h2>
         <p class="text-lg md:text-xl text-stone-400 font-light mb-16 leading-relaxed max-w-md">
           Our loom is exclusive. If your vision requires the steady hand of a master weaver, pull the thread.
         </p>
       </div>
 
       <div class="relative w-full max-w-xl mx-auto md:max-w-none">
-        <div class="absolute -top-3 -left-3 w-8 h-8 border-t border-l border-white/20"></div>
-        <div class="absolute -bottom-3 -right-3 w-8 h-8 border-b border-r border-white/20"></div>
+        <div class="absolute -top-3 -left-3 w-8 h-8 border-t border-l border-white/20" aria-hidden="true"></div>
+        <div class="absolute -bottom-3 -right-3 w-8 h-8 border-b border-r border-white/20" aria-hidden="true"></div>
 
         <form
         name="contact"
@@ -338,6 +432,7 @@
         data-netlify="true"
         netlify-honeypot="bot-field"
         class="space-y-12 p-8 md:p-14 bg-stone-900/20 border border-white/5 backdrop-blur-md rounded-sm"
+        aria-label="Contact Form"
         >
           <input type="hidden" name="form-name" value="contact">
           <input type="hidden" name="_redirect" value="thanks.html">
@@ -347,8 +442,9 @@
           </p>
 
           <div>
-            <label class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">Name</label>
+            <label for="contact-name" class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">Name</label>
             <input
+              id="contact-name"
               name="name"
               type="text"
               required
@@ -358,8 +454,9 @@
           </div>
 
           <div>
-            <label class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">Email</label>
+            <label for="contact-email" class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">Email</label>
             <input
+              id="contact-email"
               name="email"
               type="email"
               required
@@ -369,8 +466,9 @@
           </div>
 
           <div>
-            <label class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">The Request</label>
+            <label for="contact-message" class="block display-occult text-[10px] tracking-widest uppercase mb-4 text-stone-400">The Request</label>
             <textarea
+              id="contact-message"
               name="message"
               required
               rows="4"
@@ -381,26 +479,25 @@
 
           <button class="group relative w-full py-5 bg-white/5 text-stone-200 border border-white/10 display-occult tracking-[0.4em] uppercase text-xs overflow-hidden hover:border-white/30 transition-colors duration-500" type="submit">
             <span class="relative z-10 transition-colors duration-500 group-hover:text-white">BEGIN THE WEAVE</span>
-            <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+            <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" aria-hidden="true"></div>
           </button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- RESTORED EXACT ORIGINAL FOOTER -->
-  <footer class="py-20 border-t border-primary/20 bg-background-dark relative">
-    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10"></div>
+  <footer class="py-20 border-t border-primary/20 bg-background-dark relative" role="contentinfo">
+    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
       <div class="flex items-center space-x-3">
-        <span class="material-symbols-outlined text-primary text-2xl font-thin">gesture</span>
+        <span class="material-symbols-outlined text-primary text-2xl font-thin" aria-hidden="true">gesture</span>
         <span class="display-occult text-xs tracking-[0.4em] text-white uppercase">The Red Thread Agency // MMXXIV</span>
       </div>
 
       <div class="flex space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase text-[#d4af37]">
-        <a class="hover:text-primary transition-colors" href="services.html">The Loom</a>
-        <a class="hover:text-primary transition-colors" href="targeting.html">Your Saga</a>
-        <a class="hover:text-primary transition-colors" href="index.html">The Threshold</a>
+        <a class="hover:text-primary transition-colors" href="services.html" aria-label="Design Services (The Loom)">The Loom</a>
+        <a class="hover:text-primary transition-colors" href="targeting.html" aria-label="Strategy &amp; Audience Targeting (Your Saga)">Your Saga</a>
+        <a class="hover:text-primary transition-colors" href="index.html" aria-label="Homepage (The Threshold)">The Threshold</a>
       </div>
 
       <div class="text-stone-500 display-occult text-[9px] tracking-[0.4em]">
