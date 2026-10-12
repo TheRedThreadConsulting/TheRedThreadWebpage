@@ -3,7 +3,27 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>The Red Thread | Visual Manifestations</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>Portfolio &amp; Brand Systems | The Red Thread | Subculture Graphic Design Showcase</title>
+  <meta name="description" content="Explore our portfolio of alternative brand identity frameworks, esoteric logo designs, dark UI/UX showcases, and subculture graphic design by The Red Thread."/>
+  <meta name="keywords" content="alternative brand design portfolio, dark UI showcase, esoteric logo designs, subculture brand identity, gothic typography, sigil logo design"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://theredthreadconsulting.com/targeting.html"/>
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://theredthreadconsulting.com/targeting.html"/>
+  <meta property="og:title" content="Portfolio &amp; Brand Systems | The Red Thread Consulting"/>
+  <meta property="og:description" content="A sacred collection of identity systems, esoteric branding frameworks, and subculture visual manifestations."/>
+  <meta property="og:image" content="https://theredthreadconsulting.com/ravenskull.JPG"/>
+  <meta property="og:site_name" content="The Red Thread Consulting"/>
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Portfolio &amp; Brand Systems | The Red Thread Consulting"/>
+  <meta name="twitter:description" content="A sacred collection of identity systems, esoteric branding frameworks, and subculture visual manifestations."/>
+  <meta name="twitter:image" content="https://theredthreadconsulting.com/ravenskull.JPG"/>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
 
@@ -32,6 +52,93 @@
         },
       },
     };
+  </script>
+
+  <!-- JSON-LD Structured Data for Portfolio & Creative Work Entity Indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://theredthreadconsulting.com/targeting.html#webpage",
+        "url": "https://theredthreadconsulting.com/targeting.html",
+        "name": "Visual Manifestations Portfolio - The Red Thread",
+        "description": "Exhibition of subculture visual identity, esoteric logo systems, and dark UI development work.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://theredthreadconsulting.com/#website",
+          "name": "The Red Thread",
+          "url": "https://theredthreadconsulting.com/"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "VisualArtwork",
+                "name": "The Alchemist's Symbols - Raven Skull Illustration",
+                "description": "Dark minimalist typography and esoteric brand identity illustration.",
+                "image": "https://theredthreadconsulting.com/ravenskull.JPG",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "The Red Thread Consulting"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "VisualArtwork",
+                "name": "New & Revamped Branding - Moth Identity System",
+                "description": "Spiritual symbol based logo system layout for subculture brands.",
+                "image": "https://theredthreadconsulting.com/moth.PNG",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "The Red Thread Consulting"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "VisualArtwork",
+                "name": "Ethereal UI/UX Focus - Monolithic Dark Web Design",
+                "description": "High-contrast dark-mode web user interface and user experience design showcase.",
+                "image": "https://theredthreadconsulting.com/uiexamples.png",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "The Red Thread Consulting"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://theredthreadconsulting.com/targeting.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://theredthreadconsulting.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Visual Manifestations (Your Saga)",
+            "item": "https://theredthreadconsulting.com/targeting.html"
+          }
+        ]
+      }
+    ]
+  }
   </script>
 
   <style type="text/tailwindcss">
@@ -101,8 +208,14 @@
 
 <body class="bg-background-dark text-stone-300 font-sans selection:bg-primary/50 overflow-x-hidden bg-weave relative flex min-h-screen w-full flex-col">
 
+  <!-- Machine-Readable Text for Search Engines & AI Answer Bots -->
+  <div class="sr-only">
+    <h2>The Red Thread Design Portfolio &amp; Visual Identity Showcase</h2>
+    <p>This page exhibits custom brand identity projects, esoteric logo designs, subculture typography, dark UI web design, and graphic illustration systems created for alternative clients including musicians, small businesses, event organizers, and activists.</p>
+  </div>
+
   <!-- Ambient Crimson Atmosphere & Background Threads -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
     <div class="absolute inset-0 orb-glow-crimson opacity-50"></div>
     <div class="red-thread-path top-[10%] -rotate-2"></div>
     <div class="red-thread-path top-[30%] rotate-3"></div>
@@ -115,19 +228,19 @@
   </div>
 
   <!-- UNIFIED NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20">
+  <nav class="fixed top-0 w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20" aria-label="Main Navigation">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-      <a href="index.html" aria-label="Return to Homepage" class="flex items-center space-x-3 group">
-        <span class="material-symbols-outlined text-primary text-3xl font-light">gesture</span>
+      <a href="index.html" aria-label="Return to Homepage (The Threshold)" class="flex items-center space-x-3 group">
+        <span class="material-symbols-outlined text-primary text-3xl font-light" aria-hidden="true">gesture</span>
         <span class="display-occult text-xl tracking-[0.3em] text-white">THE RED THREAD</span>
       </a>
 
       <!-- Desktop links -->
       <div class="hidden md:flex items-center space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase">
-        <a class="hover:text-primary transition-colors text-stone-400" href="index.html">The Threshold</a>
-        <a class="hover:text-primary transition-colors text-stone-400" href="services.html">The Loom</a>
-        <a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="index.html#contact">
+        <a class="hover:text-primary transition-colors text-stone-400" href="index.html" aria-label="Homepage (The Threshold)">The Threshold</a>
+        <a class="hover:text-primary transition-colors text-stone-400" href="services.html" aria-label="Services Directory (The Loom)">The Loom</a>
+        <a class="px-8 py-2 border border-primary/30 text-white hover:border-primary hover:text-primary transition-all duration-500 bg-primary/5" href="index.html#contact" aria-label="Contact Us (Contact the Oracle)">
           Contact the Oracle
         </a>
       </div>
@@ -142,7 +255,7 @@
           aria-expanded="false"
           aria-label="Open menu"
         >
-          <span class="material-symbols-outlined text-3xl">menu</span>
+          <span class="material-symbols-outlined text-3xl" aria-hidden="true">menu</span>
         </button>
 
         <div
@@ -150,9 +263,9 @@
           class="hidden absolute right-0 mt-3 w-64 z-[999] rounded-xl border border-primary/20 bg-background-dark/95 backdrop-blur-xl shadow-2xl overflow-hidden"
         >
           <div class="flex flex-col p-3 display-occult text-[10px] tracking-[0.3em] uppercase">
-            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="index.html">The Threshold</a>
-            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html">The Loom</a>
-            <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="index.html#contact">
+            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="index.html" aria-label="Homepage (The Threshold)">The Threshold</a>
+            <a class="px-3 py-3 text-stone-300 hover:text-primary hover:bg-white/5 transition rounded-lg" href="services.html" aria-label="Services Directory (The Loom)">The Loom</a>
+            <a class="px-3 py-3 text-white border border-primary/30 bg-primary/5 hover:border-primary hover:text-primary transition rounded-lg" href="index.html#contact" aria-label="Contact Us (Contact the Oracle)">
               Contact the Oracle
             </a>
           </div>
@@ -166,14 +279,14 @@
     <div class="px-6 md:px-12 xl:px-16 flex flex-1 flex-col max-w-7xl w-full py-16">
       
       <!-- Hero Section -->
-      <div class="flex flex-col gap-6 mb-24 items-center text-center reveal">
+      <header class="flex flex-col gap-6 mb-24 items-center text-center reveal">
         <div class="flex items-center gap-3 display-occult text-[10px] tracking-[0.35em] text-primary uppercase">
-          <span class="size-1.5 rounded-full bg-primary animate-pulse"></span>
+          <span class="size-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
           <span>YOUR SAGA BROUGHT TO LIFE</span>
-          <span class="size-1.5 rounded-full bg-primary animate-pulse"></span>
+          <span class="size-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
         </div>
         
-        <div class="h-px w-full max-w-xl bg-gradient-to-r from-transparent via-primary/60 to-transparent my-2"></div>
+        <div class="h-px w-full max-w-xl bg-gradient-to-r from-transparent via-primary/60 to-transparent my-2" aria-hidden="true"></div>
         
         <h1 class="serif-sharp text-5xl sm:text-6xl md:text-8xl font-light leading-[0.9] text-white">
           Visual <br/>
@@ -181,102 +294,124 @@
         </h1>
         
         <p class="serif-sharp text-xl md:text-2xl text-stone-400 max-w-2xl font-light italic leading-relaxed mt-4">
-          A sacred collection of identity systems, esoteric branding frameworks, and the spiritual geometry of commerce.
+          A sacred portfolio of identity systems, esoteric branding frameworks, and the spiritual geometry of alternative commerce.
         </p>
         
-        <div class="h-px w-full max-w-xl bg-gradient-to-r from-transparent via-primary/60 to-transparent mt-4"></div>
-      </div>
+        <div class="h-px w-full max-w-xl bg-gradient-to-r from-transparent via-primary/60 to-transparent mt-4" aria-hidden="true"></div>
+      </header>
 
       <!-- Featured Large Assets -->
-      <section class="mb-32">
+      <section class="mb-32" aria-labelledby="frameworks-heading">
         <div class="flex items-center justify-between mb-10 border-b border-primary/20 pb-4 reveal">
           <div class="flex items-center gap-3">
-            <span class="size-2 bg-primary rotate-45"></span>
-            <h3 class="display-occult text-xl md:text-2xl font-normal text-white uppercase tracking-[0.25em]">Identity Frameworks</h3>
+            <span class="size-2 bg-primary rotate-45" aria-hidden="true"></span>
+            <h2 id="frameworks-heading" class="display-occult text-xl md:text-2xl font-normal text-white uppercase tracking-[0.25em]">Identity Frameworks</h2>
           </div>
           <span class="display-occult text-[10px] tracking-widest text-stone-500 uppercase">SERIES // 01-03</span>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  <!-- Card 1 -->
-  <div class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal">
-    <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
-      <div class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" data-alt="Dark minimalist typography brand identity design" style='background-image: url("ravenskull.JPG");'></div>
-      <div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
-      
-      <!-- Link Overlay -->
-      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-all duration-400 z-10">
-        <a href="https://instagram.com/theredthreadmarketing" target="_blank" rel="noopener noreferrer" class="serif-sharp text-white text-sm md:text-base border border-white/20 px-6 py-2.5 backdrop-blur-sm hover:bg-white hover:text-black transition-all display-occult tracking-widest">
-          View Project
-        </a>
-      </div>
-    </div>
-    <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
-      <div>
-        <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">Saga 01 // ILLUSTRATION</span>
-        <a href="https://instagram.com/theredthreadmarketing" class="serif-sharp text-stone-300 hover:text-[#d4af37] transition-colors text-xl tracking-wide block">The Alchemist's Symbols</a>
-      </div>
-      <span class="display-occult text-[10px] text-stone-600 tracking-widest">[01]</span>
-    </div>
-  </div>
-  
-  <!-- Card 2 -->
-  <div class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal" style="transition-delay: 100ms;">
-    <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
-      <div class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" data-alt="Spiritual symbol based logo system layout" style='background-image: url("moth.PNG");'></div>
-      <div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
+          <!-- Card 1 -->
+          <article class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
+              <div 
+                role="img" 
+                aria-label="The Alchemist's Symbols - Dark minimalist typography and raven skull artwork" 
+                class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" 
+                style='background-image: url("ravenskull.JPG");'>
+              </div>
+              <div class="absolute inset-0 border border-white/5 pointer-events-none" aria-hidden="true"></div>
+              
+              <!-- Link Overlay -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-all duration-400 z-10">
+                <a href="https://instagram.com/theredthreadmarketing" target="_blank" rel="noopener noreferrer" class="serif-sharp text-white text-sm md:text-base border border-white/20 px-6 py-2.5 backdrop-blur-sm hover:bg-white hover:text-black transition-all display-occult tracking-widest" aria-label="View Project on Instagram: The Alchemist's Symbols">
+                  View Project
+                </a>
+              </div>
+            </div>
+            <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
+              <div>
+                <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">Saga 01 // ILLUSTRATION</span>
+                <a href="https://instagram.com/theredthreadmarketing" target="_blank" rel="noopener noreferrer" class="serif-sharp text-stone-300 hover:text-[#d4af37] transition-colors text-xl tracking-wide block">
+                  <h3 class="font-normal">The Alchemist's Symbols</h3>
+                </a>
+              </div>
+              <span class="display-occult text-[10px] text-stone-600 tracking-widest">[01]</span>
+            </div>
+          </article>
+          
+          <!-- Card 2 -->
+          <article class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal" style="transition-delay: 100ms;">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
+              <div 
+                role="img" 
+                aria-label="New &amp; Revamped Branding - Spiritual symbol moth logo system layout" 
+                class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" 
+                style='background-image: url("moth.PNG");'>
+              </div>
+              <div class="absolute inset-0 border border-white/5 pointer-events-none" aria-hidden="true"></div>
 
-      <!-- Link Overlay -->
-      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-all duration-400 z-10">
-        <a href="services.html" target="_blank" rel="noopener noreferrer" class="serif-sharp text-white text-sm md:text-base border border-white/20 px-6 py-2.5 backdrop-blur-sm hover:bg-white hover:text-black transition-all display-occult tracking-widest">
-          View Project
-        </a>
-      </div>
-    </div>
-    <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
-      <div>
-        <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">Saga 02 // IDENTITY</span>
-        <a href="services.html" class="serif-sharp text-stone-300 hover:text-[#d4af37] transition-colors text-xl tracking-wide block">New &amp; Revamped Branding</a>
-      </div>
-      <span class="display-occult text-[10px] text-stone-600 tracking-widest">[02]</span>
-    </div>
-  </div>
-  
-  <!-- Card 3 -->
-  <div class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal" style="transition-delay: 200ms;">
-    <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
-      <div class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" data-alt="Monolithic black and white brand guidelines" style='background-image: url("uiexamples.png");'></div>
-      <div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
+              <!-- Link Overlay -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-all duration-400 z-10">
+                <a href="services.html" class="serif-sharp text-white text-sm md:text-base border border-white/20 px-6 py-2.5 backdrop-blur-sm hover:bg-white hover:text-black transition-all display-occult tracking-widest" aria-label="View Service Details: New &amp; Revamped Branding">
+                  View Project
+                </a>
+              </div>
+            </div>
+            <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
+              <div>
+                <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">Saga 02 // IDENTITY</span>
+                <a href="services.html" class="serif-sharp text-stone-300 hover:text-[#d4af37] transition-colors text-xl tracking-wide block">
+                  <h3 class="font-normal">New &amp; Revamped Branding</h3>
+                </a>
+              </div>
+              <span class="display-occult text-[10px] text-stone-600 tracking-widest">[02]</span>
+            </div>
+          </article>
+          
+          <!-- Card 3 -->
+          <article class="group relative flex flex-col overflow-hidden bg-[#0a0a0a] p-3 border border-white/5 hover:border-[#d4af37]/40 transition-all duration-500 reveal" style="transition-delay: 200ms;">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-black/60">
+              <div 
+                role="img" 
+                aria-label="Ethereal UI/UX Focus - Dark mode website design layouts" 
+                class="w-full h-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-70 group-hover:opacity-100" 
+                style='background-image: url("uiexamples.png");'>
+              </div>
+              <div class="absolute inset-0 border border-white/5 pointer-events-none" aria-hidden="true"></div>
 
-      <!-- Link Overlay -->
-      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-all duration-400 z-10">
-        <a href="https://linktr.ee/theredthreadconsulting" target="_blank" rel="noopener noreferrer" class="serif-sharp text-white text-sm md:text-base border border-white/20 px-6 py-2.5 backdrop-blur-sm hover:bg-white hover:text-black transition-all display-occult tracking-widest">
-          View Project
-        </a>
-      </div>
-    </div>
-    <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
-      <div>
-        <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">Saga 03 // CONSENCRATION</span>
-        <a href="https://linktr.ee/theredthreadconsulting" class="serif-sharp text-stone-300 hover:text-[#d4af37] transition-colors text-xl tracking-wide block">Ethereal UI/UX Focus</a>
-      </div>
-      <span class="display-occult text-[10px] text-stone-600 tracking-widest">[03]</span>
-    </div>
-  </div>
-</div>
+              <!-- Link Overlay -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-all duration-400 z-10">
+                <a href="https://linktr.ee/theredthreadconsulting" target="_blank" rel="noopener noreferrer" class="serif-sharp text-white text-sm md:text-base border border-white/20 px-6 py-2.5 backdrop-blur-sm hover:bg-white hover:text-black transition-all display-occult tracking-widest" aria-label="View Project on Linktree: Ethereal UI/UX Focus">
+                  View Project
+                </a>
+              </div>
+            </div>
+            <div class="pt-5 pb-2 px-2 flex justify-between items-end border-t border-white/5 mt-3">
+              <div>
+                <span class="display-occult text-[9px] tracking-[0.25em] text-primary uppercase block mb-1">Saga 03 // CONSECRATION</span>
+                <a href="https://linktr.ee/theredthreadconsulting" target="_blank" rel="noopener noreferrer" class="serif-sharp text-stone-300 hover:text-[#d4af37] transition-colors text-xl tracking-wide block">
+                  <h3 class="font-normal">Ethereal UI/UX Focus</h3>
+                </a>
+              </div>
+              <span class="display-occult text-[10px] text-stone-600 tracking-widest">[03]</span>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <!-- Decorative Thread Break -->
-      <div class="flex justify-center items-center gap-6 my-16 reveal">
+      <div class="flex justify-center items-center gap-6 my-16 reveal" aria-hidden="true">
         <div class="h-px w-28 bg-gradient-to-r from-transparent to-primary"></div>
         <span class="display-occult text-[10px] text-primary tracking-[0.4em] uppercase">✦ THE WEAVE ✦</span>
         <div class="h-px w-28 bg-gradient-to-l from-transparent to-primary"></div>
       </div>
 
-     <!-- Logo Systems Marquee Grid -->
-      <section class="mb-32 relative overflow-hidden">
+      <!-- Logo Systems Marquee Grid -->
+      <section class="mb-32 relative overflow-hidden" aria-labelledby="sigils-heading">
         <div class="text-center mb-16 reveal">
-          <span class="display-occult text-[10px] tracking-[0.3em] text-stone-500 uppercase block mb-4">LOGOS & DESIGNS</span>
-          <h3 class="serif-sharp text-4xl md:text-5xl font-light text-white italic">Sigils &amp; Marks</h3>
+          <span class="display-occult text-[10px] tracking-[0.3em] text-stone-500 uppercase block mb-4">LOGOS &amp; DESIGNS</span>
+          <h2 id="sigils-heading" class="serif-sharp text-4xl md:text-5xl font-light text-white italic">Sigils &amp; Marks</h2>
         </div>
 
         <!-- Custom Marquee CSS -->
@@ -299,84 +434,84 @@
         <div class="relative w-full border-y border-white/5 bg-[#050505]/50 py-10 reveal">
           
           <!-- Fade gradients for edges -->
-          <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
-          <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none" aria-hidden="true"></div>
           
           <!-- Marquee Container -->
           <div class="marquee-container flex overflow-hidden gap-8 w-full">
             
             <!-- First Set -->
             <div class="flex shrink-0 gap-8 animate-marquee">
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="guitar.png" alt="Guitar System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer" aria-label="Musicians &amp; Bands Design Services">
+                <img src="guitar.png" alt="Guitar System - Branding for Musicians and Alternative Bands" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Musicians &amp; Bands</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="fire.png" alt="Fire System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer" aria-label="Kindreds, Covens &amp; Clubs Branding">
+                <img src="fire.png" alt="Fire Emblem - Branding for Kindreds, Covens, and Clubs" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Kindreds, Covens &amp; Clubs</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="worktable.png" alt="Worktable System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer" aria-label="Small Business Branding Services">
+                <img src="worktable.png" alt="Worktable System - Branding for Niche Small Businesses" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Small Businesses</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="events.png" alt="Events System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer" aria-label="Events &amp; Groups Graphic Design">
+                <img src="events.png" alt="Events System - Graphic Design for Events and Special Groups" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Events &amp; Groups</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="scale.png" alt="Scale System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer" aria-label="Brand Identity Systems">
+                <img src="scale.png" alt="Scale System - Full Scale Brand Identity Systems" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Brand Identity</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="loom.jpg" alt="Loom Large" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer" aria-label="Lead Generation &amp; Campaign Architecture">
+                <img src="loom.jpg" alt="Loom Large - Lead Generation &amp; Strategic Campaign Design" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Lead Generation</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="Activists.png" alt="Flaming Fist" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer" aria-label="Activism &amp; Charity Visual Design">
+                <img src="Activists.png" alt="Flaming Fist Emblem - Visual Design for Activism and Non-Profits" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Activism &amp; Charity</span>
               </a>
             </div>
 
-            <!-- Second Set (Duplicate for Loop) -->
+            <!-- Second Set (Duplicate for Infinite Scroll) -->
             <div class="flex shrink-0 gap-8 animate-marquee" aria-hidden="true">
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="guitar.png" alt="Guitar System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" tabindex="-1" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
+                <img src="guitar.png" alt="Guitar System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Musicians &amp; Bands</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="fire.png" alt="Fire System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" tabindex="-1" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
+                <img src="fire.png" alt="Fire System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Kindreds, Covens &amp; Clubs</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="worktable.png" alt="Worktable System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" tabindex="-1" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
+                <img src="worktable.png" alt="Worktable System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Small Businesses</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="events.png" alt="Events System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" tabindex="-1" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
+                <img src="events.png" alt="Events System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Events &amp; Groups</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="scale.png" alt="Scale System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" tabindex="-1" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
+                <img src="scale.png" alt="Scale System" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Brand Identity</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="loom.jpg" alt="Loom Large" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" tabindex="-1" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
+                <img src="loom.jpg" alt="Loom Large" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Lead Generation</span>
               </a>
 
-              <a href="services.html#kindreds" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
-                <img src="Activists.png" alt="Flaming Fist" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" />
+              <a href="services.html#kindreds" tabindex="-1" class="aspect-square w-48 md:w-64 bg-[#0a0a0a] flex items-center justify-center p-8 hover:bg-stone-900/50 transition-all duration-300 group relative border border-white/5 hover:border-[#d4af37]/40 cursor-pointer">
+                <img src="Activists.png" alt="Flaming Fist" class="w-full h-full object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500" width="200" height="200" loading="lazy" />
                 <span class="absolute bottom-3 left-3 display-occult text-[9px] text-stone-600 tracking-widest">Activism &amp; Charity</span>
               </a>
             </div>
@@ -386,33 +521,33 @@
       </section>
 
       <!-- Brand Standards Detail Section -->
-      <section class="bg-[#0a0a0a]/90 border border-primary/20 p-8 md:p-14 relative overflow-hidden shadow-2xl reveal">
-        <div class="absolute -top-32 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+      <section class="bg-[#0a0a0a]/90 border border-primary/20 p-8 md:p-14 relative overflow-hidden shadow-2xl reveal" aria-labelledby="principle-heading">
+        <div class="absolute -top-32 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
         <div class="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
           
           <div class="flex-1 space-y-6">
             <span class="display-occult text-[10px] tracking-[0.3em] text-primary uppercase">TECHNIQUE &amp; TRADITION</span>
             
-            <h4 class="serif-sharp text-4xl md:text-5xl text-white font-light leading-tight">
+            <h2 id="principle-heading" class="serif-sharp text-4xl md:text-5xl text-white font-light leading-tight">
               The Thread <br/>
               <span class="text-[#d4af37] italic lowercase">Principle</span>
-            </h4>
+            </h2>
             
             <p class="serif-sharp text-xl text-stone-400 font-light leading-relaxed">
-              Our methodology transcends traditional design. We look for the underlying connection—the red thread—that binds a brand's spirit to its physical manifestation. Every stroke is intentional, every color a chosen frequency.
+              Our methodology transcends traditional graphic design. We look for the underlying connection—the red thread—that binds a brand's spirit to its physical manifestation. Every stroke is intentional, every color a chosen frequency.
             </p>
             
-            <ul class="space-y-4 pt-4 display-occult text-[10px] tracking-widest text-stone-300">
+            <ul class="space-y-4 pt-4 display-occult text-[10px] tracking-widest text-stone-300" aria-label="Brand Design Principles">
               <li class="flex items-center gap-4">
-                <span class="size-1 bg-primary rotate-45"></span>
+                <span class="size-1 bg-primary rotate-45" aria-hidden="true"></span>
                 <span>GEOMETRIC PRECISION</span>
               </li>
               <li class="flex items-center gap-4">
-                <span class="size-1 bg-primary rotate-45"></span>
+                <span class="size-1 bg-primary rotate-45" aria-hidden="true"></span>
                 <span>ARCHETYPAL RESONANCE</span>
               </li>
               <li class="flex items-center gap-4">
-                <span class="size-1 bg-primary rotate-45"></span>
+                <span class="size-1 bg-primary rotate-45" aria-hidden="true"></span>
                 <span>TIMELESS SCALABILITY</span>
               </li>
             </ul>
@@ -420,8 +555,13 @@
           
           <div class="flex-1 w-full relative">
             <div class="aspect-[4/3] lg:aspect-video bg-black/90 border border-white/10 shadow-2xl relative overflow-hidden group">
-              <div class="absolute inset-0 bg-center bg-cover grayscale contrast-125 opacity-50 group-hover:opacity-80 transition-opacity duration-700" data-alt="Women weaving a web" style='background-image: url("WomenWeavingWebHero.jpg");'></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+              <div 
+                role="img"
+                aria-label="Women weaving a web - The Red Thread Agency Philosophy Illustration"
+                class="absolute inset-0 bg-center bg-cover grayscale contrast-125 opacity-50 group-hover:opacity-80 transition-opacity duration-700" 
+                style='background-image: url("WomenWeavingWebHero.jpg");'>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" aria-hidden="true"></div>
             </div>
             
             <!-- Floating Badge -->
@@ -437,18 +577,18 @@
   </main>
 
   <!-- UNIFIED FOOTER -->
-  <footer class="py-20 border-t border-primary/20 bg-background-dark relative">
-    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10"></div>
+  <footer class="py-20 border-t border-primary/20 bg-background-dark relative" role="contentinfo">
+    <div class="absolute top-0 left-0 w-full red-thread-horizontal opacity-10" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
       <div class="flex items-center space-x-3">
-        <span class="material-symbols-outlined text-primary text-2xl font-thin">gesture</span>
+        <span class="material-symbols-outlined text-primary text-2xl font-thin" aria-hidden="true">gesture</span>
         <span class="display-occult text-xs tracking-[0.4em] text-white uppercase">The Red Thread Agency // MMXXIV</span>
       </div>
 
       <div class="flex space-x-12 display-occult text-[10px] tracking-[0.3em] uppercase text-[#d4af37]">
-        <a class="hover:text-primary transition-colors" href="services.html">The Loom</a>
-        <a class="hover:text-primary transition-colors" href="targeting.html">Your Saga</a>
-        <a class="hover:text-primary transition-colors" href="index.html">The Threshold</a>
+        <a class="hover:text-primary transition-colors" href="services.html" aria-label="Services Directory (The Loom)">The Loom</a>
+        <a class="hover:text-primary transition-colors" href="targeting.html" aria-label="Visual Manifestations (Your Saga)">Your Saga</a>
+        <a class="hover:text-primary transition-colors" href="index.html" aria-label="Homepage (The Threshold)">The Threshold</a>
       </div>
 
       <div class="text-stone-500 display-occult text-[9px] tracking-[0.4em]">
