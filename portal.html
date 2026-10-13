@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>The Inner Sanctum | The Red Thread Client Portal</title>
-  <meta name="robots" content="noindex, nofollow"/> <!-- Keep search engines out of the portal -->
+  <meta name="robots" content="noindex, nofollow"/>
 
   <!-- Netlify Identity Widget -->
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -34,7 +34,6 @@
     .serif-sharp { font-family: "Cormorant Garamond", serif }
     .display-occult { font-family: "Cinzel", serif }
     
-    /* Loader Animation */
     .loader { border-top-color: #7a0000; -webkit-animation: spinner 1.5s linear infinite; animation: spinner 1.5s linear infinite; }
     @keyframes spinner { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
   </style>
@@ -57,22 +56,18 @@
 
 <body class="bg-background-dark text-silver font-sans selection:bg-primary/30 selection:text-white bg-weave min-h-screen flex flex-col">
 
-  <!-- Minimal Nav -->
+  <!-- Nav -->
   <nav class="w-full z-50 bg-background-dark/90 backdrop-blur-xl border-b border-primary/20">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <a href="index.html" class="flex items-center space-x-3 group">
         <span class="material-symbols-outlined text-primary text-3xl font-light">gesture</span>
         <span class="display-occult text-xl tracking-[0.3em] text-white">THE RED THREAD</span>
       </a>
-
-      <!-- Identity Auth Button Area -->
-      <div id="auth-nav-area">
-        <!-- Netlify identity handles the login button natively when triggered via JS -->
-      </div>
+      <div id="auth-nav-area"></div>
     </div>
   </nav>
 
-  <!-- LOGGED OUT STATE: The Threshold -->
+  <!-- Logged Out State -->
   <main id="logged-out-state" class="flex-grow flex flex-col items-center justify-center p-6 text-center">
     <span class="material-symbols-outlined text-primary text-6xl font-light mb-6">vpn_key</span>
     <h1 class="serif-sharp text-5xl md:text-6xl text-white font-light mb-4">The Inner Sanctum</h1>
@@ -84,13 +79,13 @@
     </button>
   </main>
 
-  <!-- LOADING STATE -->
+  <!-- Loading State -->
   <main id="loading-state" class="flex-grow flex flex-col items-center justify-center p-6 text-center hidden">
     <div class="loader ease-linear rounded-full border-2 border-t-2 border-stone-800 h-16 w-16 mb-6"></div>
     <p class="display-occult text-[10px] tracking-[0.4em] uppercase text-stone-500 animate-pulse">Reading the threads...</p>
   </main>
 
-  <!-- LOGGED IN STATE: The Dashboard -->
+  <!-- Logged In State: Dashboard -->
   <main id="logged-in-state" class="flex-grow w-full max-w-7xl mx-auto px-6 py-20 hidden">
     
     <div class="flex flex-col md:flex-row justify-between items-end mb-16 pb-6 border-b border-white/10">
@@ -150,8 +145,8 @@
   </main>
 
   <script>
-    // --- STEP 1: Your Google Apps Script Web App URL ---
-    const GOOGLE_API_URL = "https://script.google.com/a/macros/theredthreadconsulting.com/s/AKfycbwo8lQGEjju4IKvy6pb6fdTwq6J7Sq8kRAKyM96O57_JqDfZ8pzdhH8CQgHzADsJlI/exec";
+    // Clean Public API URL (domain-free format to bypass CORS blocks)
+    const GOOGLE_API_URL = "https://script.google.com/macros/s/AKfycbwo8lQGEjju4IKvy6pb6fdTwq6J7Sq8kRAKyM96O57_JqDfZ8pzdhH8CQgHzADsJlI/exec";
 
     // DOM Elements
     const loggedOutState = document.getElementById('logged-out-state');
@@ -168,7 +163,6 @@
 
     // Fetch data from Google Sheet
     async function fetchClientData(userEmail) {
-      // Show loading
       loggedOutState.classList.add('hidden');
       loadingState.classList.remove('hidden');
 
@@ -176,25 +170,22 @@
         const response = await fetch(GOOGLE_API_URL, { redirect: "follow" });
         const data = await response.json();
         
-        // Find the row that matches the logged-in user's email (case insensitive)
-        const clientRow = data.find(row => row.email.toLowerCase() === userEmail.toLowerCase());
+        const clientRow = data.find(row => row.email && row.email.toString().trim().toLowerCase() === userEmail.trim().toLowerCase());
 
         if (clientRow) {
-          // Populate Dashboard
           elName.innerText = clientRow.clientName || "Honored Guest";
           elPhase.innerText = clientRow.phase || "Awaiting alignment";
           elServices.innerText = clientRow.services || "No active pacts"; 
           elBalance.innerText = clientRow.balance || "$0.00";
           elNotes.innerText = clientRow.notes || "No new visions at this time.";
           
-          if(clientRow.driveLink) {
+          if (clientRow.driveLink) {
             elDrive.href = clientRow.driveLink;
             elDrive.style.display = "inline-flex";
           } else {
             elDrive.style.display = "none";
           }
         } else {
-          // Email logged in, but not in spreadsheet
           elName.innerText = "Unbound Soul";
           elNotes.innerText = "Your email (" + userEmail + ") is not yet woven into our records. Please contact the Oracle.";
           elPhase.innerText = "Unknown";
@@ -203,7 +194,6 @@
           elDrive.style.display = "none";
         }
 
-        // Hide loading, show dashboard
         loadingState.classList.add('hidden');
         loggedInState.classList.remove('hidden');
 
@@ -227,14 +217,13 @@
       });
 
       window.netlifyIdentity.on("login", user => {
-        window.netlifyIdentity.close(); // Close the modal
+        window.netlifyIdentity.close();
         fetchClientData(user.email);
       });
 
       window.netlifyIdentity.on("logout", () => {
         loggedInState.classList.add('hidden');
         loggedOutState.classList.remove('hidden');
-        // Clear data for security
         elName.innerText = "Loading...";
       });
     }
